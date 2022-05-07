@@ -14,7 +14,6 @@ namespace Projeto_Integrador
     public partial class Form_CadastrarUsuarios : Form
     {
         public int Tipo;
-
         public Form_CadastrarUsuarios()
         {
             InitializeComponent();
@@ -22,7 +21,7 @@ namespace Projeto_Integrador
 
         public bool ChecaVazio()
         {
-            if(String.IsNullOrEmpty(txNome.Text)
+            if (String.IsNullOrEmpty(txNome.Text)
             || String.IsNullOrEmpty(txSobrenome.Text)
             || String.IsNullOrEmpty(txUsuario.Text)
             || String.IsNullOrEmpty(txSenha.Text)
@@ -30,9 +29,9 @@ namespace Projeto_Integrador
             || Tipo == 0)
             {
 
-            MessageBox.Show("Algum campo não está preenchido!",
-                        "ERRO!",
-                         MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Algum campo não está preenchido!",
+                            "ERRO!",
+                             MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
             else
@@ -79,10 +78,8 @@ namespace Projeto_Integrador
             }
         }
 
-        private void btCadastrarUsuario_Click(object sender, EventArgs e)
+        public void CadastrarUsuario()
         {
-            TipoDeUsuario();
-
             if (SenhaConfirmada() && ChecaVazio())
             {
 
@@ -161,6 +158,13 @@ namespace Projeto_Integrador
                     }
                 }
             }
+        }
+
+        private void btCadastrarUsuario_Click(object sender, EventArgs e)
+        {
+            TipoDeUsuario();
+            CadastrarUsuario();
+
         }
 
 
