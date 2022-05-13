@@ -40,6 +40,12 @@ namespace Projeto_Integrador
             }
         }
 
+
+
+
+
+
+
         public bool SenhaConfirmada()
         {
             string senha, confirmada;
