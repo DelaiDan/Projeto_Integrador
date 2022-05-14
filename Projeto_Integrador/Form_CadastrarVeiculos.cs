@@ -91,7 +91,7 @@ namespace Projeto_Integrador
             if(String.IsNullOrEmpty(cbMarca.Text)
             || String.IsNullOrEmpty(txModelo.Text)
             || String.IsNullOrEmpty(txAno.Text)
-            || String.IsNullOrEmpty(cbEstado.Text)
+            || String.IsNullOrEmpty(cbCondicao.Text)
             || String.IsNullOrEmpty(txPreço.Text)
             || String.IsNullOrEmpty(cbCambio.Text)
             || String.IsNullOrEmpty(txPotencia.Text)
@@ -131,7 +131,7 @@ namespace Projeto_Integrador
 
 
                 comm = new SqlCommand(
-                    "INSERT INTO Veiculos (Marca, Modelo, Ano, Estado, Cambio, Potencia, Consumo, Combustivel, Caminho1, Caminho2, Caminho3, Caminho4, Preço) " +
+                    "INSERT INTO Veiculos (Marca, Modelo, Ano, Condicao, Cambio, Potencia, Consumo, Combustivel, Caminho1, Caminho2, Caminho3, Caminho4, Preço) " +
                     "VALUES (@Marca, @Modelo, @Ano, @Estado, @Cambio, @Potencia, @Consumo, @Combustivel, @Caminho1, @Caminho2, @Caminho3, @Caminho4, @Preço)", conn);
 
                 comm.Parameters.Add("@Marca", System.Data.SqlDbType.NVarChar);
@@ -143,8 +143,8 @@ namespace Projeto_Integrador
                 comm.Parameters.Add("@Ano", System.Data.SqlDbType.Int);
                 comm.Parameters["@Ano"].Value = Convert.ToInt32(txAno.Text);
 
-                comm.Parameters.Add("@Estado", System.Data.SqlDbType.NVarChar);
-                comm.Parameters["@Estado"].Value = cbEstado.Text;
+                comm.Parameters.Add("@Condicao", System.Data.SqlDbType.NVarChar);
+                comm.Parameters["@Condicao"].Value = cbCondicao.Text;
 
                 comm.Parameters.Add("@Cambio", System.Data.SqlDbType.NVarChar);
                 comm.Parameters["@Cambio"].Value = cbCambio.Text;
@@ -236,7 +236,7 @@ namespace Projeto_Integrador
             cbMarca.Text = "";
             txModelo.Clear();
             txAno.Clear();
-            cbEstado.Text = "";
+            cbCondicao.Text = "";
             txPreço.Clear();
             cbCambio.Text = "";
             txPotencia.Clear();

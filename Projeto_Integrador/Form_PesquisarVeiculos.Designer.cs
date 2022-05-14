@@ -32,25 +32,25 @@ namespace Projeto_Integrador
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PesquisarVeiculos));
             this.gbFiltros = new System.Windows.Forms.GroupBox();
-            this.txEstado = new System.Windows.Forms.TextBox();
+            this.txCondicao = new System.Windows.Forms.TextBox();
             this.txAno = new System.Windows.Forms.TextBox();
             this.txMarca = new System.Windows.Forms.TextBox();
             this.txPreço = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.txModelo = new System.Windows.Forms.TextBox();
-            this.lbEstadoVeiculo = new System.Windows.Forms.Label();
+            this.lbCondicaoVeiculo = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.projetoDataSet1 = new Projeto_Integrador.ProjetoDataSet1();
+            this.projetoDataSet = new Projeto_Integrador.ProjetoDataSet();
             this.veiculosBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.veiculosTableAdapter = new Projeto_Integrador.ProjetoDataSet1TableAdapters.VeiculosTableAdapter();
+            this.veiculosTableAdapter = new Projeto_Integrador.ProjetoDataSetTableAdapters.VeiculosTableAdapter();
             this.veiculosBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.veiculosBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.veiculosBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
             this.gbFiltros.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.projetoDataSet1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.projetoDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.veiculosBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.veiculosBindingSource1)).BeginInit();
@@ -60,13 +60,13 @@ namespace Projeto_Integrador
             // 
             // gbFiltros
             // 
-            this.gbFiltros.Controls.Add(this.txEstado);
+            this.gbFiltros.Controls.Add(this.txCondicao);
             this.gbFiltros.Controls.Add(this.txAno);
             this.gbFiltros.Controls.Add(this.txMarca);
             this.gbFiltros.Controls.Add(this.txPreço);
             this.gbFiltros.Controls.Add(this.label4);
             this.gbFiltros.Controls.Add(this.txModelo);
-            this.gbFiltros.Controls.Add(this.lbEstadoVeiculo);
+            this.gbFiltros.Controls.Add(this.lbCondicaoVeiculo);
             this.gbFiltros.Controls.Add(this.label3);
             this.gbFiltros.Controls.Add(this.label2);
             this.gbFiltros.Controls.Add(this.label1);
@@ -74,11 +74,11 @@ namespace Projeto_Integrador
             this.gbFiltros.Name = "gbFiltros";
             this.gbFiltros.TabStop = false;
             // 
-            // txEstado
+            // txCondicao
             // 
-            resources.ApplyResources(this.txEstado, "txEstado");
-            this.txEstado.Name = "txEstado";
-            this.txEstado.TextChanged += new System.EventHandler(this.txEstado_TextChanged);
+            resources.ApplyResources(this.txCondicao, "txCondicao");
+            this.txCondicao.Name = "txCondicao";
+            this.txCondicao.TextChanged += new System.EventHandler(this.txCondicao_TextChanged);
             // 
             // txAno
             // 
@@ -109,10 +109,10 @@ namespace Projeto_Integrador
             this.txModelo.Name = "txModelo";
             this.txModelo.TextChanged += new System.EventHandler(this.txModelo_TextChanged_1);
             // 
-            // lbEstadoVeiculo
+            // lbCondicaoVeiculo
             // 
-            resources.ApplyResources(this.lbEstadoVeiculo, "lbEstadoVeiculo");
-            this.lbEstadoVeiculo.Name = "lbEstadoVeiculo";
+            resources.ApplyResources(this.lbCondicaoVeiculo, "lbCondicaoVeiculo");
+            this.lbCondicaoVeiculo.Name = "lbCondicaoVeiculo";
             // 
             // label3
             // 
@@ -129,15 +129,15 @@ namespace Projeto_Integrador
             resources.ApplyResources(this.label1, "label1");
             this.label1.Name = "label1";
             // 
-            // projetoDataSet1
+            // projetoDataSet
             // 
-            this.projetoDataSet1.DataSetName = "ProjetoDataSet1";
-            this.projetoDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.projetoDataSet.DataSetName = "ProjetoDataSet";
+            this.projetoDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // veiculosBindingSource
             // 
             this.veiculosBindingSource.DataMember = "Veiculos";
-            this.veiculosBindingSource.DataSource = this.projetoDataSet1;
+            this.veiculosBindingSource.DataSource = this.projetoDataSet;
             // 
             // dataGridView1
             // 
@@ -157,17 +157,17 @@ namespace Projeto_Integrador
             // veiculosBindingSource1
             // 
             this.veiculosBindingSource1.DataMember = "Veiculos";
-            this.veiculosBindingSource1.DataSource = this.projetoDataSet1;
+            this.veiculosBindingSource1.DataSource = this.projetoDataSet;
             // 
             // veiculosBindingSource2
             // 
             this.veiculosBindingSource2.DataMember = "Veiculos";
-            this.veiculosBindingSource2.DataSource = this.projetoDataSet1;
+            this.veiculosBindingSource2.DataSource = this.projetoDataSet;
             // 
             // veiculosBindingSource3
             // 
             this.veiculosBindingSource3.DataMember = "Veiculos";
-            this.veiculosBindingSource3.DataSource = this.projetoDataSet1;
+            this.veiculosBindingSource3.DataSource = this.projetoDataSet;
             // 
             // PesquisarVeiculos
             // 
@@ -182,7 +182,7 @@ namespace Projeto_Integrador
             this.Load += new System.EventHandler(this.PesquisarVeiculos_Load);
             this.gbFiltros.ResumeLayout(false);
             this.gbFiltros.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.projetoDataSet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.projetoDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.veiculosBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.veiculosBindingSource1)).EndInit();
@@ -196,20 +196,20 @@ namespace Projeto_Integrador
 
         private System.Windows.Forms.GroupBox gbFiltros;
         private System.Windows.Forms.TextBox txModelo;
-        private System.Windows.Forms.Label lbEstadoVeiculo;
+        private System.Windows.Forms.Label lbCondicaoVeiculo;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.TextBox txPreço;
         private System.Windows.Forms.Label label4;
-        private ProjetoDataSet1TableAdapters.VeiculosTableAdapter veiculosTableAdapter;
+        private ProjetoDataSetTableAdapters.VeiculosTableAdapter veiculosTableAdapter;
         private System.Windows.Forms.BindingSource veiculosBindingSource;
-        private ProjetoDataSet1 projetoDataSet1;
+        private ProjetoDataSet projetoDataSet;
         private System.Windows.Forms.BindingSource veiculosBindingSource3;
         private System.Windows.Forms.BindingSource veiculosBindingSource2;
         private System.Windows.Forms.BindingSource veiculosBindingSource1;
-        private System.Windows.Forms.TextBox txEstado;
+        private System.Windows.Forms.TextBox txCondicao;
         private System.Windows.Forms.TextBox txAno;
         private System.Windows.Forms.TextBox txMarca;
     }

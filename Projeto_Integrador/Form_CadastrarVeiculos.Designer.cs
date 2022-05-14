@@ -64,7 +64,7 @@ namespace Projeto_Integrador
             this.label10 = new System.Windows.Forms.Label();
             this.cbCombustivel = new System.Windows.Forms.ComboBox();
             this.cbCambio = new System.Windows.Forms.ComboBox();
-            this.cbEstado = new System.Windows.Forms.ComboBox();
+            this.cbCondicao = new System.Windows.Forms.ComboBox();
             this.cbMarca = new System.Windows.Forms.ComboBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.Imagem1)).BeginInit();
@@ -126,9 +126,9 @@ namespace Projeto_Integrador
             this.label7.AutoSize = true;
             this.label7.Location = new System.Drawing.Point(43, 140);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(53, 16);
+            this.label7.Size = new System.Drawing.Size(68, 16);
             this.label7.TabIndex = 6;
-            this.label7.Text = "Estado:";
+            this.label7.Text = "Condicao:";
             // 
             // label8
             // 
@@ -299,7 +299,7 @@ namespace Projeto_Integrador
             this.gbInformacoesVeiculos.Controls.Add(this.label10);
             this.gbInformacoesVeiculos.Controls.Add(this.cbCombustivel);
             this.gbInformacoesVeiculos.Controls.Add(this.cbCambio);
-            this.gbInformacoesVeiculos.Controls.Add(this.cbEstado);
+            this.gbInformacoesVeiculos.Controls.Add(this.cbCondicao);
             this.gbInformacoesVeiculos.Controls.Add(this.cbMarca);
             this.gbInformacoesVeiculos.Controls.Add(this.label4);
             this.gbInformacoesVeiculos.Controls.Add(this.label1);
@@ -365,22 +365,24 @@ namespace Projeto_Integrador
             // 
             // btLimparVeiculo
             // 
+            this.btLimparVeiculo.BackColor = System.Drawing.Color.Tomato;
             this.btLimparVeiculo.Location = new System.Drawing.Point(817, 118);
             this.btLimparVeiculo.Name = "btLimparVeiculo";
             this.btLimparVeiculo.Size = new System.Drawing.Size(95, 49);
             this.btLimparVeiculo.TabIndex = 10;
             this.btLimparVeiculo.Text = "Limpar";
-            this.btLimparVeiculo.UseVisualStyleBackColor = true;
+            this.btLimparVeiculo.UseVisualStyleBackColor = false;
             this.btLimparVeiculo.Click += new System.EventHandler(this.btLimparVeiculo_Click);
             // 
             // btAdicionarVeiculo
             // 
+            this.btAdicionarVeiculo.BackColor = System.Drawing.Color.GreenYellow;
             this.btAdicionarVeiculo.Location = new System.Drawing.Point(817, 38);
             this.btAdicionarVeiculo.Name = "btAdicionarVeiculo";
             this.btAdicionarVeiculo.Size = new System.Drawing.Size(95, 49);
             this.btAdicionarVeiculo.TabIndex = 9;
             this.btAdicionarVeiculo.Text = "Adicionar";
-            this.btAdicionarVeiculo.UseVisualStyleBackColor = true;
+            this.btAdicionarVeiculo.UseVisualStyleBackColor = false;
             this.btAdicionarVeiculo.Click += new System.EventHandler(this.btAdicionarVeiculo_Click);
             // 
             // label11
@@ -429,17 +431,17 @@ namespace Projeto_Integrador
             this.cbCambio.Size = new System.Drawing.Size(195, 24);
             this.cbCambio.TabIndex = 6;
             // 
-            // cbEstado
+            // cbCondicao
             // 
-            this.cbEstado.FormattingEnabled = true;
-            this.cbEstado.Items.AddRange(new object[] {
+            this.cbCondicao.FormattingEnabled = true;
+            this.cbCondicao.Items.AddRange(new object[] {
             "Usado",
             "Semi-Novo",
             "Novo"});
-            this.cbEstado.Location = new System.Drawing.Point(120, 138);
-            this.cbEstado.Name = "cbEstado";
-            this.cbEstado.Size = new System.Drawing.Size(162, 24);
-            this.cbEstado.TabIndex = 4;
+            this.cbCondicao.Location = new System.Drawing.Point(120, 138);
+            this.cbCondicao.Name = "cbCondicao";
+            this.cbCondicao.Size = new System.Drawing.Size(162, 24);
+            this.cbCondicao.TabIndex = 4;
             // 
             // cbMarca
             // 
@@ -525,7 +527,7 @@ namespace Projeto_Integrador
         private System.Windows.Forms.PictureBox Imagem4;
         private System.Windows.Forms.GroupBox gbFotosVeiculos;
         private System.Windows.Forms.GroupBox gbInformacoesVeiculos;
-        private System.Windows.Forms.ComboBox cbEstado;
+        private System.Windows.Forms.ComboBox cbCondicao;
         private System.Windows.Forms.ComboBox cbMarca;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.ComboBox cbCombustivel;

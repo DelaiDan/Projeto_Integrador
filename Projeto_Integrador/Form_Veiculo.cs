@@ -39,7 +39,7 @@ namespace Projeto_Integrador
             conn = new SqlConnection(connectionString);
 
 
-            comm = new SqlCommand("SELECT Marca, Modelo, Ano, Estado, Cambio, Potencia, Consumo, Combustivel, Preço, Caminho1, Caminho2, Caminho3, Caminho4 " +
+            comm = new SqlCommand("SELECT Marca, Modelo, Ano, Condicao, Cambio, Potencia, Consumo, Combustivel, Preço, Caminho1, Caminho2, Caminho3, Caminho4 " +
                                    "FROM Veiculos WHERE Codigo = @Codigo", conn); ;
 
             comm.Parameters.Add("@Codigo", System.Data.SqlDbType.Int);
@@ -71,7 +71,7 @@ namespace Projeto_Integrador
                         txMarca.Text = reader["Marca"].ToString();
                         txModelo.Text = reader["Modelo"].ToString();
                         txAno.Text = reader["Ano"].ToString();
-                        txEstado.Text = reader["Estado"].ToString();
+                        txCondicao.Text = reader["Condicao"].ToString();
                         txPreço.Text = reader["Preço"].ToString();
                         txCambio.Text = reader["Cambio"].ToString();
                         txPotencia.Text = reader["Potencia"].ToString();
