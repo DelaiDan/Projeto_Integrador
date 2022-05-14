@@ -80,7 +80,7 @@ namespace Projeto_Integrador
             this.btLogar.Name = "btLogar";
             this.btLogar.Size = new System.Drawing.Size(142, 39);
             this.btLogar.TabIndex = 4;
-            this.btLogar.Text = "Logar";
+            this.btLogar.Text = "Entrar";
             this.btLogar.UseVisualStyleBackColor = false;
             this.btLogar.Click += new System.EventHandler(this.btLogar_Click);
             // 
