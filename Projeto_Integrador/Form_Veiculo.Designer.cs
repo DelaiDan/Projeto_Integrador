@@ -170,7 +170,7 @@ namespace Projeto_Integrador
             // 
             // txCombustivel
             // 
-            this.txCombustivel.Location = new System.Drawing.Point(109, 316);
+            this.txCombustivel.Location = new System.Drawing.Point(93, 316);
             this.txCombustivel.Name = "txCombustivel";
             this.txCombustivel.ReadOnly = true;
             this.txCombustivel.Size = new System.Drawing.Size(147, 22);
@@ -293,9 +293,9 @@ namespace Projeto_Integrador
             this.label9.AutoSize = true;
             this.label9.Location = new System.Drawing.Point(15, 319);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(84, 16);
+            this.label9.Size = new System.Drawing.Size(56, 16);
             this.label9.TabIndex = 8;
-            this.label9.Text = "Combustível:";
+            this.label9.Text = "Combs.:";
             // 
             // label2
             // 
@@ -349,7 +349,7 @@ namespace Projeto_Integrador
             this.btDeletar.Name = "btDeletar";
             this.btDeletar.Size = new System.Drawing.Size(108, 41);
             this.btDeletar.TabIndex = 22;
-            this.btDeletar.Text = "DELETAR!";
+            this.btDeletar.Text = "Excluir";
             this.btDeletar.UseVisualStyleBackColor = true;
             this.btDeletar.Click += new System.EventHandler(this.btDeletar_Click);
             // 
