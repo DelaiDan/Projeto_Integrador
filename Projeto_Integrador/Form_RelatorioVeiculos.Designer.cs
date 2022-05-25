@@ -33,22 +33,22 @@ namespace Projeto_Integrador
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_RelatorioVeiculos));
             this.VeiculosBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.ProjetoDataSet1 = new Projeto_Integrador.ProjetoDataSet1();
+            this.ProjetoDataSet = new Projeto_Integrador.ProjetoDataSet();
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.VeiculosTableAdapter = new Projeto_Integrador.ProjetoDataSet1TableAdapters.VeiculosTableAdapter();
+            this.VeiculosTableAdapter = new Projeto_Integrador.ProjetoDataSetTableAdapters.VeiculosTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.VeiculosBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ProjetoDataSet1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ProjetoDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // VeiculosBindingSource
             // 
             this.VeiculosBindingSource.DataMember = "Veiculos";
-            this.VeiculosBindingSource.DataSource = this.ProjetoDataSet1;
+            this.VeiculosBindingSource.DataSource = this.ProjetoDataSet;
             // 
             // ProjetoDataSet1
             // 
-            this.ProjetoDataSet1.DataSetName = "ProjetoDataSet1";
-            this.ProjetoDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.ProjetoDataSet.DataSetName = "ProjetoDataSet";
+            this.ProjetoDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // reportViewer1
             // 
@@ -80,7 +80,7 @@ namespace Projeto_Integrador
             this.Text = "Relatório De Veículos";
             this.Load += new System.EventHandler(this.Form_RelatorioVeiculos_Load);
             ((System.ComponentModel.ISupportInitialize)(this.VeiculosBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ProjetoDataSet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ProjetoDataSet)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -89,7 +89,7 @@ namespace Projeto_Integrador
 
         private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
         private System.Windows.Forms.BindingSource VeiculosBindingSource;
-        private ProjetoDataSet1 ProjetoDataSet1;
-        private ProjetoDataSet1TableAdapters.VeiculosTableAdapter VeiculosTableAdapter;
+        private ProjetoDataSet ProjetoDataSet;
+        private ProjetoDataSetTableAdapters.VeiculosTableAdapter VeiculosTableAdapter;
     }
 }

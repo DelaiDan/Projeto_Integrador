@@ -33,12 +33,6 @@ namespace Projeto_Integrador
             }
         }
 
-        private void sairToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-            Application.Restart();
-
-        }
 
         private void usuáriosToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -87,6 +81,12 @@ namespace Projeto_Integrador
             {
                 MessageBox.Show("Você não possui permissão para acessar este recurso.");
             }
+
+        }
+        private void sairToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+            Application.Restart();
 
         }
     }

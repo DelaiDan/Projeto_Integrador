@@ -64,7 +64,7 @@ namespace Projeto_Integrador
             this.label10 = new System.Windows.Forms.Label();
             this.cbCombustivel = new System.Windows.Forms.ComboBox();
             this.cbCambio = new System.Windows.Forms.ComboBox();
-            this.cbEstado = new System.Windows.Forms.ComboBox();
+            this.cbCondicao = new System.Windows.Forms.ComboBox();
             this.cbMarca = new System.Windows.Forms.ComboBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.Imagem1)).BeginInit();
@@ -81,7 +81,7 @@ namespace Projeto_Integrador
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(43, 41);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(51, 17);
+            this.label1.Size = new System.Drawing.Size(48, 16);
             this.label1.TabIndex = 0;
             this.label1.Text = "Marca:";
             // 
@@ -90,7 +90,7 @@ namespace Projeto_Integrador
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(43, 74);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(58, 17);
+            this.label2.Size = new System.Drawing.Size(56, 16);
             this.label2.TabIndex = 1;
             this.label2.Text = "Modelo:";
             // 
@@ -99,7 +99,7 @@ namespace Projeto_Integrador
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(43, 107);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(37, 17);
+            this.label3.Size = new System.Drawing.Size(34, 16);
             this.label3.TabIndex = 2;
             this.label3.Text = "Ano:";
             // 
@@ -108,7 +108,7 @@ namespace Projeto_Integrador
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(448, 76);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(67, 17);
+            this.label4.Size = new System.Drawing.Size(63, 16);
             this.label4.TabIndex = 3;
             this.label4.Text = "Potência:";
             // 
@@ -117,7 +117,7 @@ namespace Projeto_Integrador
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(448, 41);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(59, 17);
+            this.label5.Size = new System.Drawing.Size(57, 16);
             this.label5.TabIndex = 4;
             this.label5.Text = "Câmbio:";
             // 
@@ -126,16 +126,16 @@ namespace Projeto_Integrador
             this.label7.AutoSize = true;
             this.label7.Location = new System.Drawing.Point(43, 140);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(56, 17);
+            this.label7.Size = new System.Drawing.Size(68, 16);
             this.label7.TabIndex = 6;
-            this.label7.Text = "Estado:";
+            this.label7.Text = "Condicao:";
             // 
             // label8
             // 
             this.label8.AutoSize = true;
             this.label8.Location = new System.Drawing.Point(448, 111);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(71, 17);
+            this.label8.Size = new System.Drawing.Size(67, 16);
             this.label8.TabIndex = 7;
             this.label8.Text = "Consumo:";
             // 
@@ -144,7 +144,7 @@ namespace Projeto_Integrador
             this.label9.AutoSize = true;
             this.label9.Location = new System.Drawing.Point(448, 146);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(88, 17);
+            this.label9.Size = new System.Drawing.Size(84, 16);
             this.label9.TabIndex = 8;
             this.label9.Text = "Combustível:";
             // 
@@ -222,7 +222,7 @@ namespace Projeto_Integrador
             this.label14.AutoSize = true;
             this.label14.Location = new System.Drawing.Point(773, 259);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(67, 17);
+            this.label14.Size = new System.Drawing.Size(63, 16);
             this.label14.TabIndex = 20;
             this.label14.Text = "Caminho:";
             // 
@@ -231,7 +231,7 @@ namespace Projeto_Integrador
             this.label13.AutoSize = true;
             this.label13.Location = new System.Drawing.Point(551, 259);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(67, 17);
+            this.label13.Size = new System.Drawing.Size(63, 16);
             this.label13.TabIndex = 19;
             this.label13.Text = "Caminho:";
             // 
@@ -240,7 +240,7 @@ namespace Projeto_Integrador
             this.label12.AutoSize = true;
             this.label12.Location = new System.Drawing.Point(330, 259);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(67, 17);
+            this.label12.Size = new System.Drawing.Size(63, 16);
             this.label12.TabIndex = 18;
             this.label12.Text = "Caminho:";
             // 
@@ -249,7 +249,7 @@ namespace Projeto_Integrador
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(102, 259);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(67, 17);
+            this.label6.Size = new System.Drawing.Size(63, 16);
             this.label6.TabIndex = 17;
             this.label6.Text = "Caminho:";
             // 
@@ -299,7 +299,7 @@ namespace Projeto_Integrador
             this.gbInformacoesVeiculos.Controls.Add(this.label10);
             this.gbInformacoesVeiculos.Controls.Add(this.cbCombustivel);
             this.gbInformacoesVeiculos.Controls.Add(this.cbCambio);
-            this.gbInformacoesVeiculos.Controls.Add(this.cbEstado);
+            this.gbInformacoesVeiculos.Controls.Add(this.cbCondicao);
             this.gbInformacoesVeiculos.Controls.Add(this.cbMarca);
             this.gbInformacoesVeiculos.Controls.Add(this.label4);
             this.gbInformacoesVeiculos.Controls.Add(this.label1);
@@ -318,7 +318,7 @@ namespace Projeto_Integrador
             // 
             // txModelo
             // 
-            this.txModelo.Location = new System.Drawing.Point(105, 74);
+            this.txModelo.Location = new System.Drawing.Point(120, 74);
             this.txModelo.Name = "txModelo";
             this.txModelo.Size = new System.Drawing.Size(217, 22);
             this.txModelo.TabIndex = 21;
@@ -328,7 +328,7 @@ namespace Projeto_Integrador
             this.txPreço.Location = new System.Drawing.Point(120, 172);
             this.txPreço.MaxLength = 11;
             this.txPreço.Name = "txPreço";
-            this.txPreço.Size = new System.Drawing.Size(147, 22);
+            this.txPreço.Size = new System.Drawing.Size(162, 22);
             this.txPreço.TabIndex = 5;
             // 
             // label15
@@ -336,13 +336,13 @@ namespace Projeto_Integrador
             this.label15.AutoSize = true;
             this.label15.Location = new System.Drawing.Point(43, 173);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(71, 17);
+            this.label15.Size = new System.Drawing.Size(66, 16);
             this.label15.TabIndex = 20;
             this.label15.Text = "Preço: R$";
             // 
             // txPotencia
             // 
-            this.txPotencia.Location = new System.Drawing.Point(521, 72);
+            this.txPotencia.Location = new System.Drawing.Point(538, 72);
             this.txPotencia.MaxLength = 4;
             this.txPotencia.Name = "txPotencia";
             this.txPotencia.Size = new System.Drawing.Size(38, 22);
@@ -350,7 +350,7 @@ namespace Projeto_Integrador
             // 
             // txAno
             // 
-            this.txAno.Location = new System.Drawing.Point(105, 106);
+            this.txAno.Location = new System.Drawing.Point(120, 107);
             this.txAno.MaxLength = 4;
             this.txAno.Name = "txAno";
             this.txAno.Size = new System.Drawing.Size(100, 22);
@@ -358,46 +358,48 @@ namespace Projeto_Integrador
             // 
             // txConsumo
             // 
-            this.txConsumo.Location = new System.Drawing.Point(521, 108);
+            this.txConsumo.Location = new System.Drawing.Point(538, 108);
             this.txConsumo.Name = "txConsumo";
             this.txConsumo.Size = new System.Drawing.Size(38, 22);
             this.txConsumo.TabIndex = 8;
             // 
             // btLimparVeiculo
             // 
+            this.btLimparVeiculo.BackColor = System.Drawing.Color.Tomato;
             this.btLimparVeiculo.Location = new System.Drawing.Point(817, 118);
             this.btLimparVeiculo.Name = "btLimparVeiculo";
             this.btLimparVeiculo.Size = new System.Drawing.Size(95, 49);
             this.btLimparVeiculo.TabIndex = 10;
             this.btLimparVeiculo.Text = "Limpar";
-            this.btLimparVeiculo.UseVisualStyleBackColor = true;
+            this.btLimparVeiculo.UseVisualStyleBackColor = false;
             this.btLimparVeiculo.Click += new System.EventHandler(this.btLimparVeiculo_Click);
             // 
             // btAdicionarVeiculo
             // 
+            this.btAdicionarVeiculo.BackColor = System.Drawing.Color.GreenYellow;
             this.btAdicionarVeiculo.Location = new System.Drawing.Point(817, 38);
             this.btAdicionarVeiculo.Name = "btAdicionarVeiculo";
             this.btAdicionarVeiculo.Size = new System.Drawing.Size(95, 49);
             this.btAdicionarVeiculo.TabIndex = 9;
             this.btAdicionarVeiculo.Text = "Adicionar";
-            this.btAdicionarVeiculo.UseVisualStyleBackColor = true;
+            this.btAdicionarVeiculo.UseVisualStyleBackColor = false;
             this.btAdicionarVeiculo.Click += new System.EventHandler(this.btAdicionarVeiculo_Click);
             // 
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(565, 111);
+            this.label11.Location = new System.Drawing.Point(582, 111);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(101, 17);
+            this.label11.Size = new System.Drawing.Size(93, 16);
             this.label11.TabIndex = 19;
             this.label11.Text = "Km/L (Urbano)";
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(565, 75);
+            this.label10.Location = new System.Drawing.Point(582, 75);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(33, 17);
+            this.label10.Size = new System.Drawing.Size(32, 16);
             this.label10.TabIndex = 17;
             this.label10.Text = "CVs";
             // 
@@ -424,22 +426,22 @@ namespace Projeto_Integrador
             "Automático",
             "Manual",
             "Sequencial"});
-            this.cbCambio.Location = new System.Drawing.Point(513, 38);
+            this.cbCambio.Location = new System.Drawing.Point(538, 38);
             this.cbCambio.Name = "cbCambio";
             this.cbCambio.Size = new System.Drawing.Size(195, 24);
             this.cbCambio.TabIndex = 6;
             // 
-            // cbEstado
+            // cbCondicao
             // 
-            this.cbEstado.FormattingEnabled = true;
-            this.cbEstado.Items.AddRange(new object[] {
+            this.cbCondicao.FormattingEnabled = true;
+            this.cbCondicao.Items.AddRange(new object[] {
             "Usado",
             "Semi-Novo",
             "Novo"});
-            this.cbEstado.Location = new System.Drawing.Point(105, 138);
-            this.cbEstado.Name = "cbEstado";
-            this.cbEstado.Size = new System.Drawing.Size(162, 24);
-            this.cbEstado.TabIndex = 4;
+            this.cbCondicao.Location = new System.Drawing.Point(120, 138);
+            this.cbCondicao.Name = "cbCondicao";
+            this.cbCondicao.Size = new System.Drawing.Size(162, 24);
+            this.cbCondicao.TabIndex = 4;
             // 
             // cbMarca
             // 
@@ -464,7 +466,7 @@ namespace Projeto_Integrador
             "TESLA",
             "Toyota",
             "Volkswagen"});
-            this.cbMarca.Location = new System.Drawing.Point(105, 38);
+            this.cbMarca.Location = new System.Drawing.Point(120, 38);
             this.cbMarca.Name = "cbMarca";
             this.cbMarca.Size = new System.Drawing.Size(217, 24);
             this.cbMarca.TabIndex = 1;
@@ -525,7 +527,7 @@ namespace Projeto_Integrador
         private System.Windows.Forms.PictureBox Imagem4;
         private System.Windows.Forms.GroupBox gbFotosVeiculos;
         private System.Windows.Forms.GroupBox gbInformacoesVeiculos;
-        private System.Windows.Forms.ComboBox cbEstado;
+        private System.Windows.Forms.ComboBox cbCondicao;
         private System.Windows.Forms.ComboBox cbMarca;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.ComboBox cbCombustivel;

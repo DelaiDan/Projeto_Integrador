@@ -20,7 +20,7 @@ namespace Projeto_Integrador
         private void Form_RelatorioVeiculos_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'ProjetoDataSet1.Veiculos' table. You can move, or remove it, as needed.
-            this.VeiculosTableAdapter.Fill(this.ProjetoDataSet1.Veiculos);
+            this.VeiculosTableAdapter.Fill(this.ProjetoDataSet.Veiculos);
 
             this.reportViewer1.RefreshReport();
         }

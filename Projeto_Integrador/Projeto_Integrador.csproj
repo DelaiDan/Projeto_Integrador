@@ -88,6 +88,12 @@
     <Compile Include="Form_RelatórioUsuarios.Designer.cs">
       <DependentUpon>Form_RelatórioUsuarios.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form_StatusExclusao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_StatusExclusao.Designer.cs">
+      <DependentUpon>Form_StatusExclusao.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form_TelaInicial.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -124,11 +130,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ProjetoDataSet.xsd</DependentUpon>
     </Compile>
-    <Compile Include="ProjetoDataSet1.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>ProjetoDataSet1.xsd</DependentUpon>
-    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SqlServerTypes\Loader.cs" />
     <EmbeddedResource Include="Form_CadastrarUsuarios.resx">
@@ -142,6 +143,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form_RelatórioUsuarios.resx">
       <DependentUpon>Form_RelatórioUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_StatusExclusao.resx">
+      <DependentUpon>Form_StatusExclusao.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form_TelaInicial.resx">
       <DependentUpon>Form_TelaInicial.cs</DependentUpon>
@@ -180,17 +184,6 @@
     </None>
     <None Include="ProjetoDataSet.xss">
       <DependentUpon>ProjetoDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="ProjetoDataSet1.xsc">
-      <DependentUpon>ProjetoDataSet1.xsd</DependentUpon>
-    </None>
-    <None Include="ProjetoDataSet1.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>ProjetoDataSet1.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="ProjetoDataSet1.xss">
-      <DependentUpon>ProjetoDataSet1.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

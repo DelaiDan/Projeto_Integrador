@@ -38,7 +38,7 @@ namespace Projeto_Integrador
         {
             conn = new SqlConnection(connectionString);
             conn.Open();
-            adapt = new SqlDataAdapter("SELECT Marca, Modelo, Ano, Estado, Cambio, Potencia, Consumo, Combustivel, Preço, Codigo " +
+            adapt = new SqlDataAdapter("SELECT Codigo, Marca, Modelo, Ano, Condicao, Cambio, Potencia, Consumo, Combustivel, Preço " +
                                         "FROM Veiculos", conn);
             dt = new DataTable();
             adapt.Fill(dt);
@@ -80,11 +80,11 @@ namespace Projeto_Integrador
             conn.Close();
         }
 
-        private void txEstado_TextChanged(object sender, EventArgs e)
+        private void txCondicao_TextChanged(object sender, EventArgs e)
         {
             conn = new SqlConnection(connectionString);
             conn.Open();
-            adapt = new SqlDataAdapter("SELECT * FROM Veiculos WHERE Estado LIKE '" + txEstado.Text + "%'", conn);
+            adapt = new SqlDataAdapter("SELECT * FROM Veiculos WHERE Condicao LIKE '" + txCondicao.Text + "%'", conn);
             dt = new DataTable();
             adapt.Fill(dt);
             dataGridView1.DataSource = dt;

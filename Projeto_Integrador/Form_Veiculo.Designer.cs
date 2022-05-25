@@ -40,7 +40,7 @@ namespace Projeto_Integrador
             this.gbInformacoesVeiculos = new System.Windows.Forms.GroupBox();
             this.txCombustivel = new System.Windows.Forms.TextBox();
             this.txCambio = new System.Windows.Forms.TextBox();
-            this.txEstado = new System.Windows.Forms.TextBox();
+            this.txCondicao = new System.Windows.Forms.TextBox();
             this.txModelo = new System.Windows.Forms.TextBox();
             this.txMarca = new System.Windows.Forms.TextBox();
             this.txPreço = new System.Windows.Forms.TextBox();
@@ -87,7 +87,7 @@ namespace Projeto_Integrador
             this.label14.AutoSize = true;
             this.label14.Location = new System.Drawing.Point(773, 259);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(67, 17);
+            this.label14.Size = new System.Drawing.Size(63, 16);
             this.label14.TabIndex = 20;
             this.label14.Text = "Caminho:";
             // 
@@ -143,7 +143,7 @@ namespace Projeto_Integrador
             // 
             this.gbInformacoesVeiculos.Controls.Add(this.txCombustivel);
             this.gbInformacoesVeiculos.Controls.Add(this.txCambio);
-            this.gbInformacoesVeiculos.Controls.Add(this.txEstado);
+            this.gbInformacoesVeiculos.Controls.Add(this.txCondicao);
             this.gbInformacoesVeiculos.Controls.Add(this.txModelo);
             this.gbInformacoesVeiculos.Controls.Add(this.txMarca);
             this.gbInformacoesVeiculos.Controls.Add(this.txPreço);
@@ -170,7 +170,7 @@ namespace Projeto_Integrador
             // 
             // txCombustivel
             // 
-            this.txCombustivel.Location = new System.Drawing.Point(109, 316);
+            this.txCombustivel.Location = new System.Drawing.Point(93, 316);
             this.txCombustivel.Name = "txCombustivel";
             this.txCombustivel.ReadOnly = true;
             this.txCombustivel.Size = new System.Drawing.Size(147, 22);
@@ -184,13 +184,13 @@ namespace Projeto_Integrador
             this.txCambio.Size = new System.Drawing.Size(147, 22);
             this.txCambio.TabIndex = 24;
             // 
-            // txEstado
+            // txCondicao
             // 
-            this.txEstado.Location = new System.Drawing.Point(92, 141);
-            this.txEstado.Name = "txEstado";
-            this.txEstado.ReadOnly = true;
-            this.txEstado.Size = new System.Drawing.Size(147, 22);
-            this.txEstado.TabIndex = 23;
+            this.txCondicao.Location = new System.Drawing.Point(92, 141);
+            this.txCondicao.Name = "txCondicao";
+            this.txCondicao.ReadOnly = true;
+            this.txCondicao.Size = new System.Drawing.Size(147, 22);
+            this.txCondicao.TabIndex = 23;
             // 
             // txModelo
             // 
@@ -222,7 +222,7 @@ namespace Projeto_Integrador
             this.label15.AutoSize = true;
             this.label15.Location = new System.Drawing.Point(15, 179);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(71, 17);
+            this.label15.Size = new System.Drawing.Size(66, 16);
             this.label15.TabIndex = 20;
             this.label15.Text = "Preço: R$";
             // 
@@ -257,7 +257,7 @@ namespace Projeto_Integrador
             this.label11.AutoSize = true;
             this.label11.Location = new System.Drawing.Point(137, 284);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(101, 17);
+            this.label11.Size = new System.Drawing.Size(93, 16);
             this.label11.TabIndex = 19;
             this.label11.Text = "Km/L (Urbano)";
             // 
@@ -266,7 +266,7 @@ namespace Projeto_Integrador
             this.label10.AutoSize = true;
             this.label10.Location = new System.Drawing.Point(137, 247);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(33, 17);
+            this.label10.Size = new System.Drawing.Size(32, 16);
             this.label10.TabIndex = 17;
             this.label10.Text = "CVs";
             // 
@@ -275,7 +275,7 @@ namespace Projeto_Integrador
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(15, 249);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(67, 17);
+            this.label4.Size = new System.Drawing.Size(63, 16);
             this.label4.TabIndex = 3;
             this.label4.Text = "Potência:";
             // 
@@ -284,7 +284,7 @@ namespace Projeto_Integrador
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(15, 39);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(51, 17);
+            this.label1.Size = new System.Drawing.Size(48, 16);
             this.label1.TabIndex = 0;
             this.label1.Text = "Marca:";
             // 
@@ -293,16 +293,16 @@ namespace Projeto_Integrador
             this.label9.AutoSize = true;
             this.label9.Location = new System.Drawing.Point(15, 319);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(88, 17);
+            this.label9.Size = new System.Drawing.Size(56, 16);
             this.label9.TabIndex = 8;
-            this.label9.Text = "Combustível:";
+            this.label9.Text = "Combs.:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(15, 74);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(58, 17);
+            this.label2.Size = new System.Drawing.Size(56, 16);
             this.label2.TabIndex = 1;
             this.label2.Text = "Modelo:";
             // 
@@ -311,7 +311,7 @@ namespace Projeto_Integrador
             this.label8.AutoSize = true;
             this.label8.Location = new System.Drawing.Point(15, 284);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(71, 17);
+            this.label8.Size = new System.Drawing.Size(67, 16);
             this.label8.TabIndex = 7;
             this.label8.Text = "Consumo:";
             // 
@@ -320,7 +320,7 @@ namespace Projeto_Integrador
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(15, 109);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(37, 17);
+            this.label3.Size = new System.Drawing.Size(34, 16);
             this.label3.TabIndex = 2;
             this.label3.Text = "Ano:";
             // 
@@ -329,16 +329,16 @@ namespace Projeto_Integrador
             this.label7.AutoSize = true;
             this.label7.Location = new System.Drawing.Point(15, 144);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(56, 17);
+            this.label7.Size = new System.Drawing.Size(68, 16);
             this.label7.TabIndex = 6;
-            this.label7.Text = "Estado:";
+            this.label7.Text = "Condição:";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(15, 214);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(59, 17);
+            this.label5.Size = new System.Drawing.Size(57, 16);
             this.label5.TabIndex = 4;
             this.label5.Text = "Câmbio:";
             // 
@@ -349,7 +349,7 @@ namespace Projeto_Integrador
             this.btDeletar.Name = "btDeletar";
             this.btDeletar.Size = new System.Drawing.Size(108, 41);
             this.btDeletar.TabIndex = 22;
-            this.btDeletar.Text = "DELETAR!";
+            this.btDeletar.Text = "Excluir";
             this.btDeletar.UseVisualStyleBackColor = true;
             this.btDeletar.Click += new System.EventHandler(this.btDeletar_Click);
             // 
@@ -407,7 +407,7 @@ namespace Projeto_Integrador
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txCombustivel;
         private System.Windows.Forms.TextBox txCambio;
-        private System.Windows.Forms.TextBox txEstado;
+        private System.Windows.Forms.TextBox txCondicao;
         private System.Windows.Forms.TextBox txModelo;
         private System.Windows.Forms.TextBox txMarca;
         private System.Windows.Forms.Button btDeletar;
