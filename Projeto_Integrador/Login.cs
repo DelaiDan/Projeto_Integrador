@@ -34,11 +34,13 @@ namespace Projeto_Integrador
         {
             sqlConn = new SqlConnection(strCoon);
 
+            Criptografia sigilo = new Criptografia();
+
             string usuario, senha;
 
                 usuario = txUsuario.Text;
-                senha = txSenha.Text;
-
+            //senha = txSenha.Text;    
+            senha = sigilo.GerarHashMd5(txSenha.Text);
 
             //Pega informações e compara com a DataBase
             strSql = "SELECT tipo FROM Usuarios WHERE usuario = @usuario AND senha = @senha";
