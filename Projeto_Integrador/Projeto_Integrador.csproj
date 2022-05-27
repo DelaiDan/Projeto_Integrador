@@ -64,6 +64,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Criptografia.cs" />
     <Compile Include="Form_CadastrarUsuarios.cs">
       <SubType>Form</SubType>
     </Compile>

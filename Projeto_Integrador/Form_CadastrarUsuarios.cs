@@ -90,7 +90,8 @@ namespace Projeto_Integrador
             {
 
                 bool bOk = true;
-
+                Criptografia sigilo = new Criptografia();
+                String senha = sigilo.GerarHashMd5(txSenha.Text);
 
                 SqlConnection conn;
                 SqlCommand comm;
@@ -108,7 +109,7 @@ namespace Projeto_Integrador
                 comm.Parameters["@usuario"].Value = txUsuario.Text;
 
                 comm.Parameters.Add("@senha", System.Data.SqlDbType.NVarChar);
-                comm.Parameters["@senha"].Value = txSenha.Text;
+                comm.Parameters["@senha"].Value = senha;
 
                 comm.Parameters.Add("@nome", System.Data.SqlDbType.NVarChar);
                 comm.Parameters["@nome"].Value = txNome.Text;
