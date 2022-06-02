@@ -51,9 +51,9 @@
             // 
             // btn_Troca
             // 
-            this.btn_Troca.Location = new System.Drawing.Point(114, 85);
+            this.btn_Troca.Location = new System.Drawing.Point(92, 85);
             this.btn_Troca.Name = "btn_Troca";
-            this.btn_Troca.Size = new System.Drawing.Size(92, 28);
+            this.btn_Troca.Size = new System.Drawing.Size(110, 30);
             this.btn_Troca.TabIndex = 1;
             this.btn_Troca.Text = "Troca";
             this.btn_Troca.UseVisualStyleBackColor = true;
@@ -61,9 +61,9 @@
             // 
             // btn_Venda
             // 
-            this.btn_Venda.Location = new System.Drawing.Point(114, 142);
+            this.btn_Venda.Location = new System.Drawing.Point(92, 142);
             this.btn_Venda.Name = "btn_Venda";
-            this.btn_Venda.Size = new System.Drawing.Size(92, 28);
+            this.btn_Venda.Size = new System.Drawing.Size(110, 28);
             this.btn_Venda.TabIndex = 2;
             this.btn_Venda.Text = "Venda";
             this.btn_Venda.UseVisualStyleBackColor = true;
@@ -71,9 +71,9 @@
             // 
             // btn_Repasse
             // 
-            this.btn_Repasse.Location = new System.Drawing.Point(281, 85);
+            this.btn_Repasse.Location = new System.Drawing.Point(302, 85);
             this.btn_Repasse.Name = "btn_Repasse";
-            this.btn_Repasse.Size = new System.Drawing.Size(92, 28);
+            this.btn_Repasse.Size = new System.Drawing.Size(110, 28);
             this.btn_Repasse.TabIndex = 3;
             this.btn_Repasse.Text = "Repasse";
             this.btn_Repasse.UseVisualStyleBackColor = true;
@@ -81,9 +81,9 @@
             // 
             // btn_Consignado
             // 
-            this.btn_Consignado.Location = new System.Drawing.Point(281, 142);
+            this.btn_Consignado.Location = new System.Drawing.Point(302, 142);
             this.btn_Consignado.Name = "btn_Consignado";
-            this.btn_Consignado.Size = new System.Drawing.Size(92, 28);
+            this.btn_Consignado.Size = new System.Drawing.Size(110, 30);
             this.btn_Consignado.TabIndex = 4;
             this.btn_Consignado.Text = "Consignado";
             this.btn_Consignado.UseVisualStyleBackColor = true;
@@ -91,9 +91,9 @@
             // 
             // btn_Cancelar
             // 
-            this.btn_Cancelar.Location = new System.Drawing.Point(281, 202);
+            this.btn_Cancelar.Location = new System.Drawing.Point(302, 202);
             this.btn_Cancelar.Name = "btn_Cancelar";
-            this.btn_Cancelar.Size = new System.Drawing.Size(92, 28);
+            this.btn_Cancelar.Size = new System.Drawing.Size(110, 28);
             this.btn_Cancelar.TabIndex = 5;
             this.btn_Cancelar.Text = "Cancelar";
             this.btn_Cancelar.UseVisualStyleBackColor = true;
@@ -101,9 +101,9 @@
             // 
             // btn_Outro
             // 
-            this.btn_Outro.Location = new System.Drawing.Point(114, 202);
+            this.btn_Outro.Location = new System.Drawing.Point(92, 202);
             this.btn_Outro.Name = "btn_Outro";
-            this.btn_Outro.Size = new System.Drawing.Size(92, 28);
+            this.btn_Outro.Size = new System.Drawing.Size(110, 28);
             this.btn_Outro.TabIndex = 6;
             this.btn_Outro.Text = "Erro/Outro";
             this.btn_Outro.UseVisualStyleBackColor = true;

@@ -28,7 +28,9 @@ namespace Projeto_Integrador
         }
 
 
-        public static int tipo;
+        public static string tipo;
+        public static int codigo_usuario;
+        public static string nome_usuario;
 
         public void logar()
         {
@@ -38,12 +40,12 @@ namespace Projeto_Integrador
 
             string usuario, senha;
 
-                usuario = txUsuario.Text;
-            //senha = txSenha.Text;    
+            usuario = txUsuario.Text;
+            //senha = txSenha.Text;
             senha = sigilo.GerarHashMd5(txSenha.Text);
 
             //Pega informações e compara com a DataBase
-            strSql = "SELECT tipo FROM Usuarios WHERE usuario = @usuario AND senha = @senha";
+            strSql = "SELECT tipo, id_usuario, nome FROM Usuarios WHERE usuario = @usuario AND senha = @senha";
 
                 SqlCommand cmd = new SqlCommand(strSql, sqlConn);
 
@@ -64,9 +66,9 @@ namespace Projeto_Integrador
                 {
                     sqlConn.Open();
 
-                    int T = (int)cmd2.ExecuteScalar(); // Retorna o número de Linhas encontradas com semelhança
+                    int user_exists = (int)cmd2.ExecuteScalar(); // Retorna o número de Linhas encontradas com semelhança
 
-                    if (T > 0)
+                    if (user_exists > 0)
                     {
                         logado = true;
                         Dispose();
@@ -91,7 +93,9 @@ namespace Projeto_Integrador
                     reader = cmd.ExecuteReader();
                     if (reader.Read())
                     {
-                        tipo = Convert.ToInt32(reader["tipo"]);
+                        tipo = reader["tipo"].ToString();
+                        codigo_usuario = Convert.ToInt32(reader["id_usuario"]);
+                        nome_usuario = Convert.ToString(reader["nome"]);
                     }
 
                     reader.Close(); //Encerra o leitor de dados

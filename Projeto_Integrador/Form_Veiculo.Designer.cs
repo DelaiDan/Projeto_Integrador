@@ -59,6 +59,7 @@ namespace Projeto_Integrador
             this.label7 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.btDeletar = new System.Windows.Forms.Button();
+            this.lbUsuario_Cadastro = new System.Windows.Forms.Label();
             this.gbFotosVeiculos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Imagem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Imagem4)).BeginInit();
@@ -353,11 +354,21 @@ namespace Projeto_Integrador
             this.btDeletar.UseVisualStyleBackColor = true;
             this.btDeletar.Click += new System.EventHandler(this.btDeletar_Click);
             // 
+            // lbUsuario_Cadastro
+            // 
+            this.lbUsuario_Cadastro.AutoSize = true;
+            this.lbUsuario_Cadastro.Location = new System.Drawing.Point(620, 550);
+            this.lbUsuario_Cadastro.Name = "lbUsuario_Cadastro";
+            this.lbUsuario_Cadastro.Size = new System.Drawing.Size(44, 16);
+            this.lbUsuario_Cadastro.TabIndex = 23;
+            this.lbUsuario_Cadastro.Text = "label6";
+            // 
             // Form_Veiculo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(962, 578);
+            this.Controls.Add(this.lbUsuario_Cadastro);
             this.Controls.Add(this.btDeletar);
             this.Controls.Add(this.gbInformacoesVeiculos);
             this.Controls.Add(this.gbFotosVeiculos);
@@ -377,6 +388,7 @@ namespace Projeto_Integrador
             this.gbInformacoesVeiculos.ResumeLayout(false);
             this.gbInformacoesVeiculos.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -411,5 +423,6 @@ namespace Projeto_Integrador
         private System.Windows.Forms.TextBox txModelo;
         private System.Windows.Forms.TextBox txMarca;
         private System.Windows.Forms.Button btDeletar;
+        private System.Windows.Forms.Label lbUsuario_Cadastro;
     }
 }

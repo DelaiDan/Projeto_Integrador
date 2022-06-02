@@ -13,6 +13,7 @@ namespace Projeto_Integrador
 {
     public partial class Form_CadastrarUsuarios_Gerente : Form
     {
+        Form_CadastrarUsuarios validar = new Form_CadastrarUsuarios();
         public Form_CadastrarUsuarios_Gerente()
         {
             InitializeComponent();
@@ -20,18 +21,13 @@ namespace Projeto_Integrador
 
         private void btCadastrarUsuario_Click_1(object sender, EventArgs e)
         {
-            Form_CadastrarUsuarios validar = new Form_CadastrarUsuarios();
             validar.TipoDeUsuario();
             validar.CadastrarUsuario();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            txUsuario.Clear();
-            txNome.Clear();
-            txSobrenome.Clear();
-            txSenha.Clear();
-            txConfirmaSenha.Clear();
+            validar.LimpaCampos();
         }
     }
 }

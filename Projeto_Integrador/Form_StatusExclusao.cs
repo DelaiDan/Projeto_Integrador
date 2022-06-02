@@ -13,7 +13,14 @@ namespace Projeto_Integrador
 {
     public partial class Form_StatusExclusao : Form
     {
-        int Codigo = PesquisarVeiculos.Codigo;
+        int Codigo_Veiculo = PesquisarVeiculos.Codigo;
+        int Codigo_Usuario = Login.codigo_usuario;
+        string marca = Form_Veiculo.marca;
+        string modelo = Form_Veiculo.modelo;
+        int ano = Form_Veiculo.ano;
+        string condicao = Form_Veiculo.condicao;
+        float preco = Form_Veiculo.preco;
+
         public Form_StatusExclusao()
         {
             InitializeComponent();
@@ -32,13 +39,29 @@ namespace Projeto_Integrador
             conn = new SqlConnection(connectionString);
 
 
-            comm = new SqlCommand("UPDATE Veiculos SET Status = @Status WHERE Codigo = @Codigo", conn);
+            comm = new SqlCommand("INSERT INTO Veiculos_Negociados(Marca, Modelo, Ano, Condicao, Preço, Status, ID_Usuario) "+
+                "VALUES (@Marca, @Modelo, @Ano, @Condicao, @Preço, @Status, @ID_Usuario)", conn);
 
             comm.Parameters.Add("@Status", System.Data.SqlDbType.NVarChar);
             comm.Parameters["@Status"].Value = status;
 
-            comm.Parameters.Add("@Codigo", System.Data.SqlDbType.Int);
-            comm.Parameters["@Codigo"].Value = Codigo;
+            comm.Parameters.Add("@Marca", System.Data.SqlDbType.NVarChar);
+            comm.Parameters["@Marca"].Value = marca;
+
+            comm.Parameters.Add("@Modelo", System.Data.SqlDbType.NVarChar);
+            comm.Parameters["@Modelo"].Value = modelo;
+
+            comm.Parameters.Add("@Ano", System.Data.SqlDbType.Int);
+            comm.Parameters["@Ano"].Value = ano;
+
+            comm.Parameters.Add("@Condicao", System.Data.SqlDbType.NVarChar);
+            comm.Parameters["@Condicao"].Value = condicao;
+
+            comm.Parameters.Add("@Preço", System.Data.SqlDbType.Float);
+            comm.Parameters["@Preço"].Value = preco;
+
+            comm.Parameters.Add("@ID_Usuario", System.Data.SqlDbType.Int);
+            comm.Parameters["@ID_Usuario"].Value = Codigo_Usuario;
 
             try
             {
@@ -121,7 +144,7 @@ namespace Projeto_Integrador
             comm = new SqlCommand("DELETE FROM Veiculos WHERE Codigo = @Codigo", conn);
 
             comm.Parameters.Add("@Codigo", System.Data.SqlDbType.Int);
-            comm.Parameters["@Codigo"].Value = Codigo;
+            comm.Parameters["@Codigo"].Value = Codigo_Veiculo;
 
             try
             {

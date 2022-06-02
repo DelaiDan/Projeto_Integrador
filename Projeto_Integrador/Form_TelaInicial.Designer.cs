@@ -44,6 +44,7 @@ namespace Projeto_Integrador
             this.sairToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+            this.lb_usuario = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -139,14 +140,14 @@ namespace Projeto_Integrador
             // buscaDeVeículosToolStripMenuItem
             // 
             this.buscaDeVeículosToolStripMenuItem.Name = "buscaDeVeículosToolStripMenuItem";
-            this.buscaDeVeículosToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.buscaDeVeículosToolStripMenuItem.Size = new System.Drawing.Size(148, 26);
             this.buscaDeVeículosToolStripMenuItem.Text = "Veículos";
             this.buscaDeVeículosToolStripMenuItem.Click += new System.EventHandler(this.buscaDeVeículosToolStripMenuItem_Click);
             // 
             // usuáriosToolStripMenuItem1
             // 
             this.usuáriosToolStripMenuItem1.Name = "usuáriosToolStripMenuItem1";
-            this.usuáriosToolStripMenuItem1.Size = new System.Drawing.Size(224, 26);
+            this.usuáriosToolStripMenuItem1.Size = new System.Drawing.Size(148, 26);
             this.usuáriosToolStripMenuItem1.Text = "Usuários";
             this.usuáriosToolStripMenuItem1.Click += new System.EventHandler(this.usuáriosToolStripMenuItem1_Click);
             // 
@@ -180,6 +181,16 @@ namespace Projeto_Integrador
             this.label5.Text = "O";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
+            // lb_usuario
+            // 
+            this.lb_usuario.AutoSize = true;
+            this.lb_usuario.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lb_usuario.Location = new System.Drawing.Point(1008, 11);
+            this.lb_usuario.Name = "lb_usuario";
+            this.lb_usuario.Size = new System.Drawing.Size(44, 16);
+            this.lb_usuario.TabIndex = 15;
+            this.lb_usuario.Text = "label6";
+            // 
             // TelaInicial
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -188,6 +199,7 @@ namespace Projeto_Integrador
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1280, 720);
+            this.Controls.Add(this.lb_usuario);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -224,6 +236,7 @@ namespace Projeto_Integrador
         private System.Windows.Forms.ToolStripMenuItem sairToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem usuáriosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem usuáriosToolStripMenuItem1;
+        private System.Windows.Forms.Label lb_usuario;
     }
 }
 
