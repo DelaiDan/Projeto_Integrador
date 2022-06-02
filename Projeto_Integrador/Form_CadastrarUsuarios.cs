@@ -13,7 +13,7 @@ namespace Projeto_Integrador
 {
     public partial class Form_CadastrarUsuarios : Form
     {
-        public int Tipo;
+        public string Tipo;
         public Form_CadastrarUsuarios()
         {
             InitializeComponent();
@@ -26,7 +26,7 @@ namespace Projeto_Integrador
             || String.IsNullOrEmpty(txUsuario.Text)
             || String.IsNullOrEmpty(txSenha.Text)
             || String.IsNullOrEmpty(txConfirmaSenha.Text)
-            || Tipo == 0)
+            || Tipo == "")
             {
 
                 MessageBox.Show("Algum campo não está preenchido!",
@@ -39,12 +39,6 @@ namespace Projeto_Integrador
                 return true;
             }
         }
-
-
-
-
-
-
 
         public bool SenhaConfirmada()
         {
@@ -71,17 +65,26 @@ namespace Projeto_Integrador
         {
             if (rbAdministrador.Checked)
             {
-                Tipo = 1;
+                Tipo = "Administrador";
             }
 
             else if (rbGerente.Checked)
             {
-                Tipo = 2;
+                Tipo = "Gerente";
             }
             else if (rbVendedor.Checked)
             {
-                Tipo = 3;
+                Tipo = "Vendedor";
             }
+        }
+
+        public void LimpaCampos()
+        {
+            txUsuario.Clear();
+            txNome.Clear();
+            txSobrenome.Clear();
+            txSenha.Clear();
+            txConfirmaSenha.Clear();
         }
 
         public void CadastrarUsuario()
@@ -117,7 +120,7 @@ namespace Projeto_Integrador
                 comm.Parameters.Add("@sobrenome", System.Data.SqlDbType.NVarChar);
                 comm.Parameters["@sobrenome"].Value = txSobrenome.Text;
 
-                comm.Parameters.Add("@tipo", System.Data.SqlDbType.Int);
+                comm.Parameters.Add("@tipo", System.Data.SqlDbType.NVarChar);
                 comm.Parameters["@tipo"].Value = Tipo;
 
                 try
@@ -162,6 +165,7 @@ namespace Projeto_Integrador
                             "Cadastro de Usuários",
                              MessageBoxButtons.OK, MessageBoxIcon.Information);
 
+                        LimpaCampos();
                     }
                 }
             }
@@ -177,11 +181,7 @@ namespace Projeto_Integrador
 
         private void button2_Click(object sender, EventArgs e)
         {
-            txUsuario.Clear();
-            txNome.Clear();
-            txSobrenome.Clear();
-            txSenha.Clear();
-            txConfirmaSenha.Clear();
+            LimpaCampos();
         }
     }
 }

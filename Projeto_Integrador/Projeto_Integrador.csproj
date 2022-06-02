@@ -126,6 +126,9 @@
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
+    <Compile Include="ProjetoDataSet.cs">
+      <DependentUpon>ProjetoDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="ProjetoDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

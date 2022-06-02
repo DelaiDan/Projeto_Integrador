@@ -16,12 +16,13 @@ namespace Projeto_Integrador
         public TelaInicial()
         {
             InitializeComponent();
+            lb_usuario.Text = "Bem Vindo! " + Login.nome_usuario + "(" + Login.tipo + ")";
 
         }
 
         private void veículosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (Login.tipo < 3)
+            if (Login.tipo == "Administrador" || Login.tipo == "Gerente")
             {
                 Form_CadastrarVeiculos frmCadastrarVeiculos = new Form_CadastrarVeiculos();
 
@@ -36,13 +37,13 @@ namespace Projeto_Integrador
 
         private void usuáriosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if(Login.tipo == 1)
+            if(Login.tipo == "Administrador")
             {
                 Form_CadastrarUsuarios frmCadastrarUsuarios = new Form_CadastrarUsuarios();
 
                 frmCadastrarUsuarios.ShowDialog(this);
             }
-            else if (Login.tipo == 2)
+            else if (Login.tipo == "Gerente")
             {
                     Form_CadastrarUsuarios_Gerente frmCadastrarUsuariosGerente = new Form_CadastrarUsuarios_Gerente();
 
@@ -71,7 +72,7 @@ namespace Projeto_Integrador
 
         private void usuáriosToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            if(Login.tipo == 1)
+            if(Login.tipo == "Administrador")
             {
                 Form_RelatórioUsuarios frmRelatorioUsuarios = new Form_RelatórioUsuarios();
 

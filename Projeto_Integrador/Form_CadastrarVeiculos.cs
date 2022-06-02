@@ -16,6 +16,7 @@ namespace Projeto_Integrador
 {
     public partial class Form_CadastrarVeiculos : Form
     {
+        public int Codigo_Usuario = Login.codigo_usuario;
 
         public Form_CadastrarVeiculos()
         {
@@ -131,8 +132,8 @@ namespace Projeto_Integrador
 
 
                 comm = new SqlCommand(
-                    "INSERT INTO Veiculos (Marca, Modelo, Ano, Condicao, Cambio, Potencia, Consumo, Combustivel, Caminho1, Caminho2, Caminho3, Caminho4, Preço) " +
-                    "VALUES (@Marca, @Modelo, @Ano, @Estado, @Cambio, @Potencia, @Consumo, @Combustivel, @Caminho1, @Caminho2, @Caminho3, @Caminho4, @Preço)", conn);
+                    "INSERT INTO Veiculos (Marca, Modelo, Ano, Condicao, Cambio, Potencia, Consumo, Combustivel, Caminho1, Caminho2, Caminho3, Caminho4, Preço, ID_Usuario) " +
+                    "VALUES (@Marca, @Modelo, @Ano, @Condicao, @Cambio, @Potencia, @Consumo, @Combustivel, @Caminho1, @Caminho2, @Caminho3, @Caminho4, @Preço, @ID_Usuario)", conn);
 
                 comm.Parameters.Add("@Marca", System.Data.SqlDbType.NVarChar);
                 comm.Parameters["@Marca"].Value = cbMarca.Text;
@@ -172,6 +173,9 @@ namespace Projeto_Integrador
 
                 comm.Parameters.Add("@Preço", System.Data.SqlDbType.Float);
                 comm.Parameters["@Preço"].Value = Convert.ToSingle(txPreço.Text);
+
+                comm.Parameters.Add("@ID_Usuario", System.Data.SqlDbType.Int);
+                comm.Parameters["@ID_Usuario"].Value = Codigo_Usuario;
 
                 try
                 {
@@ -246,10 +250,10 @@ namespace Projeto_Integrador
             txCaminho2.Clear();
             txCaminho3.Clear();
             txCaminho4.Clear();
-            Imagem1.Image = null;
-            Imagem2.Image = null;
-            Imagem3.Image = null;
-            Imagem4.Image = null;
+            Imagem1.Image = new Bitmap(@"C:\Users\arthu\Pictures\add-camera-icon-icon-add-11553485583calilemiyg.png", true);
+            Imagem2.Image = new Bitmap(@"C:\Users\arthu\Pictures\add-camera-icon-icon-add-11553485583calilemiyg.png", true);
+            Imagem3.Image = new Bitmap(@"C:\Users\arthu\Pictures\add-camera-icon-icon-add-11553485583calilemiyg.png", true);
+            Imagem4.Image = new Bitmap(@"C:\Users\arthu\Pictures\add-camera-icon-icon-add-11553485583calilemiyg.png", true);
 
         }
     }

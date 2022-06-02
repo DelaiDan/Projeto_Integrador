@@ -20,6 +20,15 @@ namespace Projeto_Integrador
         string Caminho2;
         string Caminho3;
         string Caminho4;
+        string Usuario_Cadastro;
+
+        //Consulta posterior
+        public static string marca = "";
+        public static string modelo = "";
+        public static int ano;
+        public static string condicao = "";
+        public static float preco;
+
 
         public Form_Veiculo()
         {
@@ -31,7 +40,7 @@ namespace Projeto_Integrador
             bool bOk = true;
 
             SqlConnection conn;
-            SqlCommand comm;
+            SqlCommand comm, comm2;
             SqlDataReader reader;
 
             string connectionString = @"Data Source=localhost\SQLEXPRESS;Initial Catalog=Projeto;Integrated Security=True";
@@ -39,8 +48,10 @@ namespace Projeto_Integrador
             conn = new SqlConnection(connectionString);
 
 
-            comm = new SqlCommand("SELECT Marca, Modelo, Ano, Condicao, Cambio, Potencia, Consumo, Combustivel, Preço, Caminho1, Caminho2, Caminho3, Caminho4 " +
-                                   "FROM Veiculos WHERE Codigo = @Codigo", conn); ;
+            comm = new SqlCommand("SELECT V.Marca, V.Modelo, V.Ano, V.Condicao, V.Cambio, V.Potencia, V.Consumo, V.Combustivel, V.Preço, V.Caminho1, V.Caminho2, V.Caminho3, V.Caminho4, U.usuario " +
+                                    "FROM Veiculos AS V " +
+                                    "INNER JOIN Usuarios AS U ON U.id_usuario = V.ID_Usuario " +
+                                    "WHERE Codigo = @Codigo", conn);
 
             comm.Parameters.Add("@Codigo", System.Data.SqlDbType.Int);
             comm.Parameters["@Codigo"].Value = Codigo;
@@ -68,11 +79,21 @@ namespace Projeto_Integrador
 
                     if (reader.Read())
                     {
-                        txMarca.Text = reader["Marca"].ToString();
-                        txModelo.Text = reader["Modelo"].ToString();
+                        marca = reader["Marca"].ToString();
+                        txMarca.Text = marca;
+
+                        modelo = reader["Modelo"].ToString();
+                        txModelo.Text = modelo;
+
                         txAno.Text = reader["Ano"].ToString();
-                        txCondicao.Text = reader["Condicao"].ToString();
+                        ano = Convert.ToInt32(reader["Ano"]);
+
+                        condicao = reader["Condicao"].ToString();
+                        txCondicao.Text = condicao;
+
+                        preco = Convert.ToSingle(reader["Preço"]);
                         txPreço.Text = reader["Preço"].ToString();
+
                         txCambio.Text = reader["Cambio"].ToString();
                         txPotencia.Text = reader["Potencia"].ToString();
                         txConsumo.Text = reader["Consumo"].ToString();
@@ -81,6 +102,9 @@ namespace Projeto_Integrador
                         Caminho2 = reader["Caminho2"].ToString();
                         Caminho3 = reader["Caminho3"].ToString();
                         Caminho4 = reader["Caminho4"].ToString();
+
+                        Usuario_Cadastro = reader["usuario"].ToString();
+                        lbUsuario_Cadastro.Text = "Criado por: " + Usuario_Cadastro;
                     }
 
                     reader.Close(); //Encerra o leitor de dados
@@ -121,7 +145,7 @@ namespace Projeto_Integrador
 
         private void btDeletar_Click(object sender, EventArgs e)
         {
-            if (Login.tipo < 3)
+            if (Login.tipo == "Vendedor")
             {
                 Form_StatusExclusao frmStatusExclusao = new Form_StatusExclusao();
 
