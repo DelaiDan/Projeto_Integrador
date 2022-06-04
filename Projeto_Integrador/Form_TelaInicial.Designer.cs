@@ -45,6 +45,8 @@ namespace Projeto_Integrador
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.lb_usuario = new System.Windows.Forms.Label();
+            this.agendarTestDriveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.agendarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -90,6 +92,7 @@ namespace Projeto_Integrador
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.stripPesquisar,
             this.concessionáriasToolStripMenuItem,
+            this.agendarTestDriveToolStripMenuItem,
             this.relatóriosToolStripMenuItem,
             this.sairToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
@@ -191,6 +194,21 @@ namespace Projeto_Integrador
             this.lb_usuario.TabIndex = 15;
             this.lb_usuario.Text = "label6";
             // 
+            // agendarTestDriveToolStripMenuItem
+            // 
+            this.agendarTestDriveToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.agendarToolStripMenuItem});
+            this.agendarTestDriveToolStripMenuItem.Name = "agendarTestDriveToolStripMenuItem";
+            this.agendarTestDriveToolStripMenuItem.Size = new System.Drawing.Size(90, 24);
+            this.agendarTestDriveToolStripMenuItem.Text = "Test-Drive";
+            // 
+            // agendarToolStripMenuItem
+            // 
+            this.agendarToolStripMenuItem.Name = "agendarToolStripMenuItem";
+            this.agendarToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.agendarToolStripMenuItem.Text = "Agendar";
+            this.agendarToolStripMenuItem.Click += new System.EventHandler(this.agendarToolStripMenuItem_Click);
+            // 
             // TelaInicial
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -237,6 +255,8 @@ namespace Projeto_Integrador
         private System.Windows.Forms.ToolStripMenuItem usuáriosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem usuáriosToolStripMenuItem1;
         private System.Windows.Forms.Label lb_usuario;
+        private System.Windows.Forms.ToolStripMenuItem agendarTestDriveToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem agendarToolStripMenuItem;
     }
 }
 

@@ -16,7 +16,7 @@ namespace Projeto_Integrador
         public TelaInicial()
         {
             InitializeComponent();
-            lb_usuario.Text = "Bem Vindo! " + Login.nome_usuario + "(" + Login.tipo + ")";
+            lb_usuario.Text = "Bem Vindo! " + Login.nome_usuario + " (" + Login.tipo + ")";
 
         }
 
@@ -62,6 +62,12 @@ namespace Projeto_Integrador
 
             frmVeiculos.ShowDialog(this);
         }
+        private void agendarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form_TestDrive testDrive = new Form_TestDrive();
+
+            testDrive.ShowDialog(this);
+        }
 
         private void buscaDeVeículosToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -90,5 +96,6 @@ namespace Projeto_Integrador
             Application.Restart();
 
         }
+
     }
 }

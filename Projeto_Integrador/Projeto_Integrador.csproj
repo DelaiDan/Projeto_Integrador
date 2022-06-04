@@ -113,6 +113,12 @@
     <Compile Include="Form_CadastrarVeiculos.Designer.cs">
       <DependentUpon>Form_CadastrarVeiculos.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form_TestDrive.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_TestDrive.Designer.cs">
+      <DependentUpon>Form_TestDrive.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form_Veiculo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -159,6 +165,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form_CadastrarVeiculos.resx">
       <DependentUpon>Form_CadastrarVeiculos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_TestDrive.resx">
+      <DependentUpon>Form_TestDrive.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form_Veiculo.resx">
       <DependentUpon>Form_Veiculo.cs</DependentUpon>
