@@ -77,6 +77,12 @@
     <Compile Include="Form_CadastrarUsuarios_Gerente.Designer.cs">
       <DependentUpon>Form_CadastrarUsuarios_Gerente.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form_Consulta_TestDrive.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Consulta_TestDrive.Designer.cs">
+      <DependentUpon>Form_Consulta_TestDrive.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form_RelatorioVeiculos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -147,6 +153,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form_CadastrarUsuarios_Gerente.resx">
       <DependentUpon>Form_CadastrarUsuarios_Gerente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Consulta_TestDrive.resx">
+      <DependentUpon>Form_Consulta_TestDrive.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form_RelatorioVeiculos.resx">
       <DependentUpon>Form_RelatorioVeiculos.cs</DependentUpon>

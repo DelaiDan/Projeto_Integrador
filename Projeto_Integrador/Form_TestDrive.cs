@@ -17,6 +17,7 @@ namespace Projeto_Integrador
         string Veiculo;
         string Usuario_Criador = Login.nome_usuario;
         string Usuario_Realizador;
+        string Cliente;
 
         string Data;
         string Hora;
@@ -42,7 +43,7 @@ namespace Projeto_Integrador
 
         private void TestDrive_Preview()
         {
-            lb_Preview.Text = "Veiculo : " + Veiculo + "\nUsuário: " + Usuario_Realizador + "\nData: " + Data + " às " + Hora;
+            lb_Preview.Text = "Veiculo : " + Veiculo + "\nUsuário: " + Usuario_Realizador + "\nData: " + Data + " às " + Hora + "\nCliente: " + Cliente;
         }
 
         private bool ChecarVazio()
@@ -54,6 +55,7 @@ namespace Projeto_Integrador
                 String.IsNullOrEmpty(Usuario_Realizador) ||
                 String.IsNullOrEmpty(Data) ||
                 String.IsNullOrEmpty(Hora) ||
+                String.IsNullOrEmpty(Cliente) ||
                 checa_data <= 0
                 )
             {
@@ -167,6 +169,12 @@ namespace Projeto_Integrador
             TestDrive_Preview();
         }
 
+        private void tx_Cliente_TextChanged(object sender, EventArgs e)
+        {
+            Cliente = tx_Cliente.Text;
+            TestDrive_Preview();
+        }
+
         //INSERT
         private void btnAgendar_Click(object sender, EventArgs e)
         {
@@ -184,8 +192,8 @@ namespace Projeto_Integrador
 
 
                 comm = new SqlCommand(
-                    "INSERT INTO Test_Drive (Data, ID_Veiculo, ID_Usr_Criador, ID_Usr_Real) " +
-                    "VALUES (@Data, @ID_Veiculo, @ID_Usr_Criador, @ID_Usr_Real)", conn);
+                    "INSERT INTO Test_Drive (Data, ID_Veiculo, ID_Usr_Criador, ID_Usr_Real, Cliente) " +
+                    "VALUES (@Data, @ID_Veiculo, @ID_Usr_Criador, @ID_Usr_Real, @Cliente)", conn);
 
                 comm.Parameters.Add("@Data", System.Data.SqlDbType.DateTime);
                 comm.Parameters["@Data"].Value = dt_escolherData.Value;
@@ -198,6 +206,9 @@ namespace Projeto_Integrador
 
                 comm.Parameters.Add("@ID_Usr_Real", System.Data.SqlDbType.Int);
                 comm.Parameters["@ID_Usr_Real"].Value = cb_Realizador.SelectedValue;
+
+                comm.Parameters.Add("@Cliente", System.Data.SqlDbType.NVarChar);
+                comm.Parameters["@Cliente"].Value = tx_Cliente.Text;
 
                 try
                 {

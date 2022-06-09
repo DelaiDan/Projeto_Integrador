@@ -145,7 +145,7 @@ namespace Projeto_Integrador
 
         private void btDeletar_Click(object sender, EventArgs e)
         {
-            if (Login.tipo == "Vendedor")
+            if (Login.tipo == "Vendedor" || Login.tipo == "Administrador")
             {
                 Form_StatusExclusao frmStatusExclusao = new Form_StatusExclusao();
 

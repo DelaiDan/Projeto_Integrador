@@ -97,5 +97,11 @@ namespace Projeto_Integrador
 
         }
 
+        private void consultarAgendamentosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form_Consulta_TestDrive frmConsultaTestDrive = new Form_Consulta_TestDrive();
+
+            frmConsultaTestDrive.ShowDialog(this);
+        }
     }
 }
