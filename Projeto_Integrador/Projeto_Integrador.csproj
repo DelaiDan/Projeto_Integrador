@@ -64,7 +64,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AppDefault.cs" />
     <Compile Include="Criptografia.cs" />
+    <Compile Include="Form_AlterarVeiculo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_AlterarVeiculo.Designer.cs">
+      <DependentUpon>Form_AlterarVeiculo.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form_CadastrarUsuarios.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -148,6 +155,9 @@
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SqlServerTypes\Loader.cs" />
+    <EmbeddedResource Include="Form_AlterarVeiculo.resx">
+      <DependentUpon>Form_AlterarVeiculo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form_CadastrarUsuarios.resx">
       <DependentUpon>Form_CadastrarUsuarios.cs</DependentUpon>
     </EmbeddedResource>

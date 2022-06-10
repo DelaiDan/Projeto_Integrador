@@ -158,5 +158,12 @@ namespace Projeto_Integrador
                 MessageBox.Show("Você não possui permissão para acessar este recurso.");
             }
         }
+
+        private void bt_Alterar_Click(object sender, EventArgs e)
+        {
+            AlterarVeiculo frmAlterarVeiculo = new AlterarVeiculo();
+
+            frmAlterarVeiculo.ShowDialog(this);
+        }
     }
 }
