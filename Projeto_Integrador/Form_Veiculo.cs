@@ -161,7 +161,7 @@ namespace Projeto_Integrador
 
         private void bt_Alterar_Click(object sender, EventArgs e)
         {
-            AlterarVeiculo frmAlterarVeiculo = new AlterarVeiculo();
+            Form_AlterarVeiculo frmAlterarVeiculo = new Form_AlterarVeiculo();
 
             frmAlterarVeiculo.ShowDialog(this);
         }
