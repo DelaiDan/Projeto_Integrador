@@ -38,6 +38,8 @@ namespace Projeto_Integrador
             this.concessionáriasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.veículosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.usuáriosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.agendarTestDriveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.agendarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.relatóriosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.buscaDeVeículosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.usuáriosToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
@@ -45,8 +47,7 @@ namespace Projeto_Integrador
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.lb_usuario = new System.Windows.Forms.Label();
-            this.agendarTestDriveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.agendarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.consultarAgendamentosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -131,6 +132,22 @@ namespace Projeto_Integrador
             this.usuáriosToolStripMenuItem.Text = "Usuários";
             this.usuáriosToolStripMenuItem.Click += new System.EventHandler(this.usuáriosToolStripMenuItem_Click);
             // 
+            // agendarTestDriveToolStripMenuItem
+            // 
+            this.agendarTestDriveToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.agendarToolStripMenuItem,
+            this.consultarAgendamentosToolStripMenuItem});
+            this.agendarTestDriveToolStripMenuItem.Name = "agendarTestDriveToolStripMenuItem";
+            this.agendarTestDriveToolStripMenuItem.Size = new System.Drawing.Size(90, 24);
+            this.agendarTestDriveToolStripMenuItem.Text = "Test-Drive";
+            // 
+            // agendarToolStripMenuItem
+            // 
+            this.agendarToolStripMenuItem.Name = "agendarToolStripMenuItem";
+            this.agendarToolStripMenuItem.Size = new System.Drawing.Size(259, 26);
+            this.agendarToolStripMenuItem.Text = "Agendar";
+            this.agendarToolStripMenuItem.Click += new System.EventHandler(this.agendarToolStripMenuItem_Click);
+            // 
             // relatóriosToolStripMenuItem
             // 
             this.relatóriosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -194,20 +211,12 @@ namespace Projeto_Integrador
             this.lb_usuario.TabIndex = 15;
             this.lb_usuario.Text = "label6";
             // 
-            // agendarTestDriveToolStripMenuItem
+            // consultarAgendamentosToolStripMenuItem
             // 
-            this.agendarTestDriveToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.agendarToolStripMenuItem});
-            this.agendarTestDriveToolStripMenuItem.Name = "agendarTestDriveToolStripMenuItem";
-            this.agendarTestDriveToolStripMenuItem.Size = new System.Drawing.Size(90, 24);
-            this.agendarTestDriveToolStripMenuItem.Text = "Test-Drive";
-            // 
-            // agendarToolStripMenuItem
-            // 
-            this.agendarToolStripMenuItem.Name = "agendarToolStripMenuItem";
-            this.agendarToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
-            this.agendarToolStripMenuItem.Text = "Agendar";
-            this.agendarToolStripMenuItem.Click += new System.EventHandler(this.agendarToolStripMenuItem_Click);
+            this.consultarAgendamentosToolStripMenuItem.Name = "consultarAgendamentosToolStripMenuItem";
+            this.consultarAgendamentosToolStripMenuItem.Size = new System.Drawing.Size(259, 26);
+            this.consultarAgendamentosToolStripMenuItem.Text = "Consultar Agendamentos";
+            this.consultarAgendamentosToolStripMenuItem.Click += new System.EventHandler(this.consultarAgendamentosToolStripMenuItem_Click);
             // 
             // TelaInicial
             // 
@@ -257,6 +266,7 @@ namespace Projeto_Integrador
         private System.Windows.Forms.Label lb_usuario;
         private System.Windows.Forms.ToolStripMenuItem agendarTestDriveToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem agendarToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem consultarAgendamentosToolStripMenuItem;
     }
 }
 

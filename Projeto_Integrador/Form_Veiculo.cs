@@ -145,7 +145,7 @@ namespace Projeto_Integrador
 
         private void btDeletar_Click(object sender, EventArgs e)
         {
-            if (Login.tipo == "Vendedor")
+            if (Login.tipo == "Vendedor" || Login.tipo == "Administrador")
             {
                 Form_StatusExclusao frmStatusExclusao = new Form_StatusExclusao();
 
@@ -157,6 +157,13 @@ namespace Projeto_Integrador
             {
                 MessageBox.Show("Você não possui permissão para acessar este recurso.");
             }
+        }
+
+        private void bt_Alterar_Click(object sender, EventArgs e)
+        {
+            Form_AlterarVeiculo frmAlterarVeiculo = new Form_AlterarVeiculo();
+
+            frmAlterarVeiculo.ShowDialog(this);
         }
     }
 }
