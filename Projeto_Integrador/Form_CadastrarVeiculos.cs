@@ -256,5 +256,10 @@ namespace Projeto_Integrador
             Imagem4.Image = new Bitmap(@"C:\Users\arthu\Pictures\add-camera-icon-icon-add-11553485583calilemiyg.png", true);
 
         }
+
+        private void bt_Cancelar_Click(object sender, EventArgs e)
+        {
+            Dispose();
+        }
     }
 }
