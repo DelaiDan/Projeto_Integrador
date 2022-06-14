@@ -45,21 +45,23 @@ namespace Projeto_Integrador
             this.VeiculosBindingSource.DataMember = "Veiculos";
             this.VeiculosBindingSource.DataSource = this.ProjetoDataSet;
             // 
-            // ProjetoDataSet1
+            // ProjetoDataSet
             // 
             this.ProjetoDataSet.DataSetName = "ProjetoDataSet";
             this.ProjetoDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // reportViewer1
             // 
+            this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
             reportDataSource1.Name = "DataSetVeiculos";
             reportDataSource1.Value = this.VeiculosBindingSource;
             this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "Projeto_Integrador.Report1.rdlc";
-            this.reportViewer1.Location = new System.Drawing.Point(12, 6);
+            this.reportViewer1.Location = new System.Drawing.Point(0, 0);
+            this.reportViewer1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.reportViewer1.Name = "reportViewer1";
             this.reportViewer1.ServerReport.BearerToken = null;
-            this.reportViewer1.Size = new System.Drawing.Size(1099, 653);
+            this.reportViewer1.Size = new System.Drawing.Size(842, 545);
             this.reportViewer1.TabIndex = 0;
             // 
             // VeiculosTableAdapter
@@ -68,12 +70,13 @@ namespace Projeto_Integrador
             // 
             // Form_RelatorioVeiculos
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1123, 671);
+            this.ClientSize = new System.Drawing.Size(842, 545);
             this.Controls.Add(this.reportViewer1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.MaximizeBox = false;
             this.Name = "Form_RelatorioVeiculos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
