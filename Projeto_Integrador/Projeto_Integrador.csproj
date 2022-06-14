@@ -90,6 +90,12 @@
     <Compile Include="Form_Consulta_TestDrive.Designer.cs">
       <DependentUpon>Form_Consulta_TestDrive.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form_RelatorioTestDrive.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_RelatorioTestDrive.Designer.cs">
+      <DependentUpon>Form_RelatorioTestDrive.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form_RelatorioVeiculos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -167,6 +173,9 @@
     <EmbeddedResource Include="Form_Consulta_TestDrive.resx">
       <DependentUpon>Form_Consulta_TestDrive.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Form_RelatorioTestDrive.resx">
+      <DependentUpon>Form_RelatorioTestDrive.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form_RelatorioVeiculos.resx">
       <DependentUpon>Form_RelatorioVeiculos.cs</DependentUpon>
     </EmbeddedResource>
@@ -205,6 +214,7 @@
     </Compile>
     <EmbeddedResource Include="Report1.rdlc" />
     <EmbeddedResource Include="Report2.rdlc" />
+    <EmbeddedResource Include="Report3.rdlc" />
     <None Include="packages.config" />
     <None Include="ProjetoDataSet.xsc">
       <DependentUpon>ProjetoDataSet.xsd</DependentUpon>

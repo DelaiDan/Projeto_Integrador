@@ -103,5 +103,12 @@ namespace Projeto_Integrador
 
             frmConsultaTestDrive.ShowDialog(this);
         }
+
+        private void testDriveToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form_RelatorioTestDrive frmRelatorioTestDrive = new Form_RelatorioTestDrive();
+
+            frmRelatorioTestDrive.ShowDialog(this);
+        }
     }
 }

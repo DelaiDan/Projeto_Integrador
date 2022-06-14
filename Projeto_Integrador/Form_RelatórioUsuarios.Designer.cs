@@ -32,35 +32,37 @@ namespace Projeto_Integrador
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_RelatórioUsuarios));
-            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.ProjetoDataSet = new Projeto_Integrador.ProjetoDataSet();
             this.UsuariosBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.ProjetoDataSet = new Projeto_Integrador.ProjetoDataSet();
+            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.UsuariosTableAdapter = new Projeto_Integrador.ProjetoDataSetTableAdapters.UsuariosTableAdapter();
-            ((System.ComponentModel.ISupportInitialize)(this.ProjetoDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.UsuariosBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ProjetoDataSet)).BeginInit();
             this.SuspendLayout();
             // 
-            // reportViewer1
+            // UsuariosBindingSource
             // 
-            reportDataSource1.Name = "DataSetUsuarios";
-            reportDataSource1.Value = this.UsuariosBindingSource;
-            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
-            this.reportViewer1.LocalReport.ReportEmbeddedResource = "Projeto_Integrador.Report2.rdlc";
-            this.reportViewer1.Location = new System.Drawing.Point(12, 6);
-            this.reportViewer1.Name = "reportViewer1";
-            this.reportViewer1.ServerReport.BearerToken = null;
-            this.reportViewer1.Size = new System.Drawing.Size(1099, 647);
-            this.reportViewer1.TabIndex = 0;
+            this.UsuariosBindingSource.DataMember = "Usuarios";
+            this.UsuariosBindingSource.DataSource = this.ProjetoDataSet;
             // 
             // ProjetoDataSet
             // 
             this.ProjetoDataSet.DataSetName = "ProjetoDataSet";
             this.ProjetoDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // UsuariosBindingSource
+            // reportViewer1
             // 
-            this.UsuariosBindingSource.DataMember = "Usuarios";
-            this.UsuariosBindingSource.DataSource = this.ProjetoDataSet;
+            this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
+            reportDataSource1.Name = "DataSetUsuarios";
+            reportDataSource1.Value = this.UsuariosBindingSource;
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
+            this.reportViewer1.LocalReport.ReportEmbeddedResource = "Projeto_Integrador.Report2.rdlc";
+            this.reportViewer1.Location = new System.Drawing.Point(0, 0);
+            this.reportViewer1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.reportViewer1.Name = "reportViewer1";
+            this.reportViewer1.ServerReport.BearerToken = null;
+            this.reportViewer1.Size = new System.Drawing.Size(842, 545);
+            this.reportViewer1.TabIndex = 0;
             // 
             // UsuariosTableAdapter
             // 
@@ -68,19 +70,20 @@ namespace Projeto_Integrador
             // 
             // Form_RelatórioUsuarios
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1123, 671);
+            this.ClientSize = new System.Drawing.Size(842, 545);
             this.Controls.Add(this.reportViewer1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.MaximizeBox = false;
             this.Name = "Form_RelatórioUsuarios";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Relatório Usuários";
             this.Load += new System.EventHandler(this.Form_RelatórioUsuarios_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.ProjetoDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.UsuariosBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ProjetoDataSet)).EndInit();
             this.ResumeLayout(false);
 
         }
