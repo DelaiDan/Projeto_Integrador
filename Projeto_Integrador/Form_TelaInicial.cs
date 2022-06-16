@@ -111,5 +111,11 @@ namespace Projeto_Integrador
             frmRelatorioTestDrive.ShowDialog(this);
         }
 
+        private void veículosNegociadosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form_RelatorioVeiculosNegociados frmRelatorioVeiculosNegociados = new Form_RelatorioVeiculosNegociados();
+
+            frmRelatorioVeiculosNegociados.ShowDialog(this);
+        }
     }
 }

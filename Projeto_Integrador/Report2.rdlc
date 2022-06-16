@@ -6,16 +6,16 @@
         <TablixBody>
           <TablixColumns>
             <TablixColumn>
-              <Width>4.07824cm</Width>
+              <Width>6.31584cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>4.12057cm</Width>
+              <Width>6.35817cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>4.61924cm</Width>
+              <Width>6.85684cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>3.23157cm</Width>
+              <Width>5.46917cm</Width>
             </TablixColumn>
           </TablixColumns>
           <TablixRows>
@@ -351,43 +351,33 @@
         </TablixRowHierarchy>
         <DataSetName>DataSetUsuarios</DataSetName>
         <Top>0.17639cm</Top>
-        <Left>1.97629cm</Left>
         <Height>1.2cm</Height>
-        <Width>16.04962cm</Width>
+        <Width>25cm</Width>
         <Style>
           <Border>
             <Style>None</Style>
           </Border>
         </Style>
       </Tablix>
-      <Line Name="Line1">
-        <Top>0.03528cm</Top>
-        <Height>0cm</Height>
-        <Width>19.73542cm</Width>
-        <ZIndex>1</ZIndex>
-        <Style>
-          <Border>
-            <Style>Solid</Style>
-          </Border>
-        </Style>
-      </Line>
-      <Line Name="Line2">
-        <Top>5.45572cm</Top>
-        <Left>0.01224cm</Left>
-        <Height>0cm</Height>
-        <Width>19.73542cm</Width>
-        <ZIndex>2</ZIndex>
-        <Style>
-          <Border>
-            <Style>Solid</Style>
-          </Border>
-        </Style>
-      </Line>
     </ReportItems>
-    <Height>2.18959in</Height>
-    <Style />
+    <Height>2in</Height>
+    <Style>
+      <Border>
+        <Style>None</Style>
+      </Border>
+      <TopBorder>
+        <Color>Black</Color>
+        <Style>Solid</Style>
+        <Width>1pt</Width>
+      </TopBorder>
+      <BottomBorder>
+        <Color>Black</Color>
+        <Style>Solid</Style>
+        <Width>1pt</Width>
+      </BottomBorder>
+    </Style>
   </Body>
-  <Width>7.77467in</Width>
+  <Width>9.84252in</Width>
   <Page>
     <PageHeader>
       <Height>2.35479cm</Height>
@@ -412,7 +402,7 @@
           </Paragraphs>
           <rd:DefaultName>Textbox1</rd:DefaultName>
           <Top>0.95677cm</Top>
-          <Left>6.78375cm</Left>
+          <Left>9.34484cm</Left>
           <Height>0.99688cm</Height>
           <Width>8.16208cm</Width>
           <Style>
@@ -430,7 +420,7 @@
           <Value>WhatsAppImage20211024at1606121</Value>
           <Sizing>FitProportional</Sizing>
           <Top>0.95677cm</Top>
-          <Left>5.39724cm</Left>
+          <Left>7.95833cm</Left>
           <Height>0.99688cm</Height>
           <Width>1.00787cm</Width>
           <ZIndex>1</ZIndex>
@@ -470,9 +460,9 @@
           </Paragraphs>
           <rd:DefaultName>Textbox4</rd:DefaultName>
           <Top>1.23458cm</Top>
-          <Left>12.9085cm</Left>
+          <Left>16.77997cm</Left>
           <Height>0.62646cm</Height>
-          <Width>6.72109cm</Width>
+          <Width>6.85338cm</Width>
           <Style>
             <Border>
               <Style>None</Style>
@@ -499,6 +489,7 @@
           </Paragraphs>
           <rd:DefaultName>Textbox6</rd:DefaultName>
           <Top>1.23458cm</Top>
+          <Left>1.73016cm</Left>
           <Height>0.62646cm</Height>
           <Width>7.23604cm</Width>
           <ZIndex>1</ZIndex>
@@ -528,7 +519,7 @@
           </Paragraphs>
           <rd:DefaultName>Textbox8</rd:DefaultName>
           <Top>1.23458cm</Top>
-          <Left>8.9662cm</Left>
+          <Left>11.78437cm</Left>
           <Height>0.62646cm</Height>
           <Width>2.5cm</Width>
           <ZIndex>2</ZIndex>
