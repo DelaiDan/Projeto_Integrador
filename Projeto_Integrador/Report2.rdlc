@@ -6,16 +6,16 @@
         <TablixBody>
           <TablixColumns>
             <TablixColumn>
-              <Width>3.34667cm</Width>
+              <Width>4.07824cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>3.389cm</Width>
+              <Width>4.12057cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>3.88767cm</Width>
+              <Width>4.61924cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.5cm</Width>
+              <Width>3.23157cm</Width>
             </TablixColumn>
           </TablixColumns>
           <TablixRows>
@@ -35,7 +35,6 @@
                               <Style>
                                 <FontSize>11pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
-                                <Color>#666666</Color>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -76,7 +75,6 @@
                               <Style>
                                 <FontSize>11pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
-                                <Color>#666666</Color>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -117,7 +115,6 @@
                               <Style>
                                 <FontSize>11pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
-                                <Color>#666666</Color>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -158,7 +155,6 @@
                               <Style>
                                 <FontSize>11pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
-                                <Color>#666666</Color>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -305,7 +301,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Sum(Fields!tipo.Value)</Value>
+                              <Value>=Fields!tipo.Value</Value>
                               <Style>
                                 <FontWeight>Normal</FontWeight>
                                 <Color>#333333</Color>
@@ -354,32 +350,32 @@
           </TablixMembers>
         </TablixRowHierarchy>
         <DataSetName>DataSetUsuarios</DataSetName>
-        <Top>2.22342cm</Top>
+        <Top>0.17639cm</Top>
+        <Left>1.97629cm</Left>
         <Height>1.2cm</Height>
-        <Width>13.12333cm</Width>
+        <Width>16.04962cm</Width>
         <Style>
           <Border>
             <Style>None</Style>
           </Border>
         </Style>
       </Tablix>
-      <Image Name="Image2">
-        <Source>Embedded</Source>
-        <Value>WhatsAppImage20211024at1606121</Value>
-        <Sizing>FitProportional</Sizing>
-        <Height>1.7507cm</Height>
-        <Width>1.881cm</Width>
+      <Line Name="Line1">
+        <Top>0.03528cm</Top>
+        <Height>0cm</Height>
+        <Width>19.73542cm</Width>
         <ZIndex>1</ZIndex>
         <Style>
           <Border>
-            <Style>None</Style>
+            <Style>Solid</Style>
           </Border>
         </Style>
-      </Image>
-      <Line Name="Line1">
-        <Top>1.9462cm</Top>
+      </Line>
+      <Line Name="Line2">
+        <Top>5.45572cm</Top>
+        <Left>0.01224cm</Left>
         <Height>0cm</Height>
-        <Width>13.16567cm</Width>
+        <Width>19.73542cm</Width>
         <ZIndex>2</ZIndex>
         <Style>
           <Border>
@@ -387,68 +383,155 @@
           </Border>
         </Style>
       </Line>
-      <Textbox Name="Textbox9">
-        <CanGrow>true</CanGrow>
-        <KeepTogether>true</KeepTogether>
-        <Paragraphs>
-          <Paragraph>
-            <TextRuns>
-              <TextRun>
-                <Value>RELATÓRIO DE USUÁRIOS</Value>
-                <Style>
-                  <FontSize>18pt</FontSize>
-                </Style>
-              </TextRun>
-            </TextRuns>
-            <Style />
-          </Paragraph>
-        </Paragraphs>
-        <rd:DefaultName>Textbox9</rd:DefaultName>
-        <Top>0.5842cm</Top>
-        <Left>3.34667cm</Left>
-        <Height>0.83283cm</Height>
-        <Width>8.43703cm</Width>
-        <ZIndex>3</ZIndex>
-        <Style>
-          <Border>
-            <Style>None</Style>
-          </Border>
-          <PaddingLeft>2pt</PaddingLeft>
-          <PaddingRight>2pt</PaddingRight>
-          <PaddingTop>2pt</PaddingTop>
-          <PaddingBottom>2pt</PaddingBottom>
-        </Style>
-      </Textbox>
     </ReportItems>
-    <Height>2.36667in</Height>
+    <Height>2.18959in</Height>
     <Style />
   </Body>
-  <Width>5.18333in</Width>
+  <Width>7.77467in</Width>
   <Page>
-    <PageFooter>
-      <Height>2.54cm</Height>
+    <PageHeader>
+      <Height>2.35479cm</Height>
       <PrintOnFirstPage>true</PrintOnFirstPage>
       <PrintOnLastPage>true</PrintOnLastPage>
       <ReportItems>
-        <Textbox Name="Textbox10">
+        <Textbox Name="Textbox4">
           <CanGrow>true</CanGrow>
           <KeepTogether>true</KeepTogether>
           <Paragraphs>
             <Paragraph>
               <TextRuns>
                 <TextRun>
-                  <Value>=("Página " + CStr(Globals!PageNumber))</Value>
+                  <Value>Relatório de Usuários</Value>
+                  <Style>
+                    <FontSize>20pt</FontSize>
+                  </Style>
+                </TextRun>
+              </TextRuns>
+              <Style />
+            </Paragraph>
+          </Paragraphs>
+          <rd:DefaultName>Textbox1</rd:DefaultName>
+          <Top>0.95677cm</Top>
+          <Left>6.78375cm</Left>
+          <Height>0.99688cm</Height>
+          <Width>8.16208cm</Width>
+          <Style>
+            <Border>
+              <Style>None</Style>
+            </Border>
+            <PaddingLeft>2pt</PaddingLeft>
+            <PaddingRight>2pt</PaddingRight>
+            <PaddingTop>2pt</PaddingTop>
+            <PaddingBottom>2pt</PaddingBottom>
+          </Style>
+        </Textbox>
+        <Image Name="Image3">
+          <Source>Embedded</Source>
+          <Value>WhatsAppImage20211024at1606121</Value>
+          <Sizing>FitProportional</Sizing>
+          <Top>0.95677cm</Top>
+          <Left>5.39724cm</Left>
+          <Height>0.99688cm</Height>
+          <Width>1.00787cm</Width>
+          <ZIndex>1</ZIndex>
+          <Style>
+            <Border>
+              <Style>None</Style>
+            </Border>
+          </Style>
+        </Image>
+      </ReportItems>
+      <Style>
+        <Border>
+          <Style>None</Style>
+        </Border>
+      </Style>
+    </PageHeader>
+    <PageFooter>
+      <Height>2.8575cm</Height>
+      <PrintOnFirstPage>true</PrintOnFirstPage>
+      <PrintOnLastPage>true</PrintOnLastPage>
+      <ReportItems>
+        <Textbox Name="Textbox6">
+          <CanGrow>true</CanGrow>
+          <KeepTogether>true</KeepTogether>
+          <Paragraphs>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>Cavalo Opaco - Gestão de Veículos</Value>
+                  <Style>
+                    <FontSize>12pt</FontSize>
+                  </Style>
+                </TextRun>
+              </TextRuns>
+              <Style />
+            </Paragraph>
+          </Paragraphs>
+          <rd:DefaultName>Textbox4</rd:DefaultName>
+          <Top>1.23458cm</Top>
+          <Left>12.9085cm</Left>
+          <Height>0.62646cm</Height>
+          <Width>6.72109cm</Width>
+          <Style>
+            <Border>
+              <Style>None</Style>
+            </Border>
+            <PaddingLeft>2pt</PaddingLeft>
+            <PaddingRight>2pt</PaddingRight>
+            <PaddingTop>2pt</PaddingTop>
+            <PaddingBottom>2pt</PaddingBottom>
+          </Style>
+        </Textbox>
+        <Textbox Name="Textbox8">
+          <CanGrow>true</CanGrow>
+          <KeepTogether>true</KeepTogether>
+          <Paragraphs>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>=("Data de Emissão: " + Now())</Value>
                   <Style />
                 </TextRun>
               </TextRuns>
               <Style />
             </Paragraph>
           </Paragraphs>
-          <rd:DefaultName>Textbox10</rd:DefaultName>
-          <Top>1.2827cm</Top>
-          <Left>5.6642cm</Left>
-          <Height>0.6cm</Height>
+          <rd:DefaultName>Textbox6</rd:DefaultName>
+          <Top>1.23458cm</Top>
+          <Height>0.62646cm</Height>
+          <Width>7.23604cm</Width>
+          <ZIndex>1</ZIndex>
+          <Style>
+            <Border>
+              <Style>None</Style>
+            </Border>
+            <PaddingLeft>2pt</PaddingLeft>
+            <PaddingRight>2pt</PaddingRight>
+            <PaddingTop>2pt</PaddingTop>
+            <PaddingBottom>2pt</PaddingBottom>
+          </Style>
+        </Textbox>
+        <Textbox Name="Textbox9">
+          <CanGrow>true</CanGrow>
+          <KeepTogether>true</KeepTogether>
+          <Paragraphs>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>=("Página " + CStr(Globals!PageNumber) + " de " + CStr(Globals!TotalPages))</Value>
+                  <Style />
+                </TextRun>
+              </TextRuns>
+              <Style />
+            </Paragraph>
+          </Paragraphs>
+          <rd:DefaultName>Textbox8</rd:DefaultName>
+          <Top>1.23458cm</Top>
+          <Left>8.9662cm</Left>
+          <Height>0.62646cm</Height>
           <Width>2.5cm</Width>
+          <ZIndex>2</ZIndex>
           <Style>
             <Border>
               <Style>None</Style>
