@@ -28,8 +28,8 @@ namespace Projeto_Integrador
         public Form_Consulta_TestDrive()
         {
             InitializeComponent();
-            dt_escolherData1.CustomFormat = "dd/MM/yy -- HH:mm";
-            dt_escolherData2.CustomFormat = "dd/MM/yy -- HH:mm";
+            dt_escolherData1.CustomFormat = "dd/MM/yy";
+            dt_escolherData2.CustomFormat = "dd/MM/yy";
         }
 
         private void Form_Consulta_TestDrive_Load(object sender, EventArgs e)
