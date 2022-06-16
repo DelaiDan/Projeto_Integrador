@@ -19,6 +19,8 @@ namespace Projeto_Integrador
 
         private void Form_RelatorioTestDrive_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'projetoDataSet.Rel_TestDrive' table. You can move, or remove it, as needed.
+            this.rel_TestDriveTableAdapter.FillTestDrive(this.projetoDataSet.Rel_TestDrive);
             // TODO: This line of code loads data into the 'projetoDataSet.Test_Drive' table. You can move, or remove it, as needed.
             this.test_DriveTableAdapter.Fill(this.projetoDataSet.Test_Drive);
 

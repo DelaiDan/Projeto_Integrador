@@ -1,0 +1,6 @@
+Ano: 2003
+Combustível: Gasolina
+Câmbio: Manual
+Preço: 23-30
+Potência: 182 cv
+Consumo Urbano: 8

@@ -214,7 +214,7 @@
     </Compile>
     <EmbeddedResource Include="Report1.rdlc" />
     <EmbeddedResource Include="Report2.rdlc" />
-    <EmbeddedResource Include="Report3.rdlc" />
+    <EmbeddedResource Include="Report4.rdlc" />
     <None Include="packages.config" />
     <None Include="ProjetoDataSet.xsc">
       <DependentUpon>ProjetoDataSet.xsd</DependentUpon>
@@ -254,6 +254,10 @@
     <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Properties\DataSources\" />
+    <Folder Include="Resources\Images\Veiculos\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
