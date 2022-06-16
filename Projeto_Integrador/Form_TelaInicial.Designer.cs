@@ -49,7 +49,6 @@ namespace Projeto_Integrador
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.lb_usuario = new System.Windows.Forms.Label();
-            this.testeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -163,8 +162,7 @@ namespace Projeto_Integrador
             this.relatóriosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.buscaDeVeículosToolStripMenuItem,
             this.usuáriosToolStripMenuItem1,
-            this.testDriveToolStripMenuItem,
-            this.testeToolStripMenuItem});
+            this.testDriveToolStripMenuItem});
             this.relatóriosToolStripMenuItem.Name = "relatóriosToolStripMenuItem";
             this.relatóriosToolStripMenuItem.Size = new System.Drawing.Size(90, 24);
             this.relatóriosToolStripMenuItem.Text = "Relatórios";
@@ -230,12 +228,6 @@ namespace Projeto_Integrador
             this.lb_usuario.TabIndex = 15;
             this.lb_usuario.Text = "label6";
             // 
-            // testeToolStripMenuItem
-            // 
-            this.testeToolStripMenuItem.Name = "testeToolStripMenuItem";
-            this.testeToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
-            this.testeToolStripMenuItem.Text = "Teste";
-            // 
             // TelaInicial
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -287,7 +279,6 @@ namespace Projeto_Integrador
         private System.Windows.Forms.ToolStripMenuItem agendarToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem consultarAgendamentosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem testDriveToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem testeToolStripMenuItem;
     }
 }
 

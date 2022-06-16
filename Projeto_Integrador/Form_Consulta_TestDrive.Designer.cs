@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_Consulta_TestDrive));
             this.usuariosBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.projetoDataSet = new Projeto_Integrador.ProjetoDataSet();
             this.veiculosBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -234,6 +235,8 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.gb_FiltrosConsultaTD);
             this.Controls.Add(this.dataGridView1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.MaximizeBox = false;
             this.Name = "Form_Consulta_TestDrive";
