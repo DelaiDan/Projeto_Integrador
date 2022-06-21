@@ -25,6 +25,8 @@ namespace Projeto_Integrador
         SqlDataAdapter adapt;
         DataTable dt;
 
+        private int Codigo = 0;
+
         public Form_Consulta_TestDrive()
         {
             InitializeComponent();
@@ -159,6 +161,92 @@ namespace Projeto_Integrador
             adapt.Fill(dt);
             dataGridView1.DataSource = dt;
             conn.Close();
+        }
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            DataGridViewRow row = this.dataGridView1.Rows[e.RowIndex];
+            string CodigoStr = row.Cells["ID_TestDrive"].Value.ToString();
+            Codigo = Convert.ToInt32(CodigoStr);
+        }
+
+        private void btDeletar_Click(object sender, EventArgs e)
+        {
+            DialogResult res = MessageBox.Show("Deseja EXCLUIR este registro?",
+            "CONFIRMAR!",
+            MessageBoxButtons.YesNo, MessageBoxIcon.Error);
+
+            if (res == DialogResult.Yes)
+            {
+                if (Codigo != 0)
+                {
+                    bool bOk = true;
+
+                    SqlConnection conn;
+                    SqlCommand comm;
+
+                    string connectionString = @"Data Source=localhost\SQLEXPRESS;Initial Catalog=Projeto;Integrated Security=True";
+
+                    conn = new SqlConnection(connectionString);
+
+                    comm = new SqlCommand("DELETE FROM Test_Drive WHERE ID_TestDrive = @Codigo", conn);
+
+                    comm.Parameters.Add("@Codigo", System.Data.SqlDbType.Int);
+                    comm.Parameters["@Codigo"].Value = Codigo;
+
+                    try
+                    {
+                        //Abrir a conexão com o Banco de Dados
+                        try
+                        {
+                            conn.Open();
+                        }
+                        catch (Exception error)
+                        {
+                            MessageBox.Show(error.Message,
+                                "Erro ao tentar abrir uma conexão com o banco de dados.",
+                                MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                            bOk = false;
+                        }
+
+                        //Executa o comando SQL para inserir dados na base de dados
+                        try
+                        {
+                            comm.ExecuteNonQuery();
+                        }
+                        catch (Exception error)
+                        {
+                            MessageBox.Show(error.Message,
+                                "Erro ao tentar executar o comando SQL.",
+                                MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                            bOk = false;
+                        }
+
+                    }
+                    catch { }
+                    finally
+                    {
+                        conn.Close();
+
+                        if (bOk == true)
+                        {
+                            MessageBox.Show("Test-Drive Deletado com SUCESSO!!",
+                                "DELETE",
+                                 MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                            Dispose();
+
+                        }
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Selecione um ID válido.",
+                        "ERRO!",
+                        MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
         }
     }
 }
