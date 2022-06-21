@@ -372,6 +372,41 @@ SELECT Marca, Modelo, Ano, Condicao, Cambio, Potencia, Consumo, Combustivel, Cod
             </Mappings>
             <Sources />
           </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="Rel_VeiculosNegociadosTableAdapter" GeneratorDataComponentClassName="Rel_VeiculosNegociadosTableAdapter" Name="Rel_VeiculosNegociados" UserDataComponentName="Rel_VeiculosNegociadosTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ProjetoConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>Select
+VN.Marca,
+VN.Modelo,
+VN.Ano,
+VN.Condicao,
+VN.Preço,
+VN.Status,
+VN.ID_Negoc,
+U.nome,
+U.usuario
+FROM Veiculos_Negociados AS VN
+LEFT JOIN Usuarios AS U ON VN.ID_Usuario = U.id_usuario</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Marca" DataSetColumn="Marca" />
+              <Mapping SourceColumn="Modelo" DataSetColumn="Modelo" />
+              <Mapping SourceColumn="Ano" DataSetColumn="Ano" />
+              <Mapping SourceColumn="Condicao" DataSetColumn="Condicao" />
+              <Mapping SourceColumn="Preço" DataSetColumn="Preço" />
+              <Mapping SourceColumn="Status" DataSetColumn="Status" />
+              <Mapping SourceColumn="ID_Negoc" DataSetColumn="ID_Negoc" />
+              <Mapping SourceColumn="nome" DataSetColumn="nome" />
+              <Mapping SourceColumn="usuario" DataSetColumn="usuario" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
         </Tables>
         <Sources />
       </DataSource>
@@ -522,78 +557,129 @@ SELECT Marca, Modelo, Ano, Condicao, Cambio, Potencia, Consumo, Combustivel, Cod
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Veiculos" msprop:Generator_RowEvHandlerName="VeiculosRowChangeEventHandler" msprop:Generator_RowDeletedName="VeiculosRowDeleted" msprop:Generator_RowDeletingName="VeiculosRowDeleting" msprop:Generator_RowEvArgName="VeiculosRowChangeEvent" msprop:Generator_TablePropName="Veiculos" msprop:Generator_RowChangedName="VeiculosRowChanged" msprop:Generator_RowChangingName="VeiculosRowChanging" msprop:Generator_TableClassName="VeiculosDataTable" msprop:Generator_RowClassName="VeiculosRow" msprop:Generator_TableVarName="tableVeiculos" msprop:Generator_UserTableName="Veiculos">
+        <xs:element name="Veiculos" msprop:Generator_RowClassName="VeiculosRow" msprop:Generator_RowEvHandlerName="VeiculosRowChangeEventHandler" msprop:Generator_RowDeletedName="VeiculosRowDeleted" msprop:Generator_RowDeletingName="VeiculosRowDeleting" msprop:Generator_RowEvArgName="VeiculosRowChangeEvent" msprop:Generator_TablePropName="Veiculos" msprop:Generator_RowChangedName="VeiculosRowChanged" msprop:Generator_UserTableName="Veiculos" msprop:Generator_RowChangingName="VeiculosRowChanging" msprop:Generator_TableClassName="VeiculosDataTable" msprop:Generator_TableVarName="tableVeiculos">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="Marca" msprop:Generator_ColumnPropNameInRow="Marca" msprop:Generator_ColumnPropNameInTable="MarcaColumn" msprop:Generator_ColumnVarNameInTable="columnMarca" msprop:Generator_UserColumnName="Marca">
+              <xs:element name="Marca" msprop:Generator_UserColumnName="Marca" msprop:Generator_ColumnPropNameInTable="MarcaColumn" msprop:Generator_ColumnPropNameInRow="Marca" msprop:Generator_ColumnVarNameInTable="columnMarca">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="15" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="Modelo" msprop:Generator_ColumnPropNameInRow="Modelo" msprop:Generator_ColumnPropNameInTable="ModeloColumn" msprop:Generator_ColumnVarNameInTable="columnModelo" msprop:Generator_UserColumnName="Modelo">
+              <xs:element name="Modelo" msprop:Generator_UserColumnName="Modelo" msprop:Generator_ColumnPropNameInTable="ModeloColumn" msprop:Generator_ColumnPropNameInRow="Modelo" msprop:Generator_ColumnVarNameInTable="columnModelo">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="15" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="Ano" msprop:Generator_ColumnPropNameInRow="Ano" msprop:Generator_ColumnPropNameInTable="AnoColumn" msprop:Generator_ColumnVarNameInTable="columnAno" msprop:Generator_UserColumnName="Ano" type="xs:int" />
-              <xs:element name="Condicao" msprop:Generator_ColumnPropNameInRow="Condicao" msprop:Generator_ColumnPropNameInTable="CondicaoColumn" msprop:Generator_ColumnVarNameInTable="columnCondicao" msprop:Generator_UserColumnName="Condicao">
+              <xs:element name="Ano" msprop:Generator_UserColumnName="Ano" msprop:Generator_ColumnPropNameInTable="AnoColumn" msprop:Generator_ColumnPropNameInRow="Ano" msprop:Generator_ColumnVarNameInTable="columnAno" type="xs:int" />
+              <xs:element name="Condicao" msprop:Generator_UserColumnName="Condicao" msprop:Generator_ColumnPropNameInTable="CondicaoColumn" msprop:Generator_ColumnPropNameInRow="Condicao" msprop:Generator_ColumnVarNameInTable="columnCondicao">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="10" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="Cambio" msprop:Generator_ColumnPropNameInRow="Cambio" msprop:Generator_ColumnPropNameInTable="CambioColumn" msprop:Generator_ColumnVarNameInTable="columnCambio" msprop:Generator_UserColumnName="Cambio">
+              <xs:element name="Cambio" msprop:Generator_UserColumnName="Cambio" msprop:Generator_ColumnPropNameInTable="CambioColumn" msprop:Generator_ColumnPropNameInRow="Cambio" msprop:Generator_ColumnVarNameInTable="columnCambio">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="15" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="Potencia" msprop:Generator_ColumnPropNameInRow="Potencia" msprop:Generator_ColumnPropNameInTable="PotenciaColumn" msprop:Generator_ColumnVarNameInTable="columnPotencia" msprop:Generator_UserColumnName="Potencia" type="xs:int" />
-              <xs:element name="Consumo" msprop:Generator_ColumnPropNameInRow="Consumo" msprop:Generator_ColumnPropNameInTable="ConsumoColumn" msprop:Generator_ColumnVarNameInTable="columnConsumo" msprop:Generator_UserColumnName="Consumo" type="xs:double" />
-              <xs:element name="Combustivel" msprop:Generator_ColumnPropNameInRow="Combustivel" msprop:Generator_ColumnPropNameInTable="CombustivelColumn" msprop:Generator_ColumnVarNameInTable="columnCombustivel" msprop:Generator_UserColumnName="Combustivel">
+              <xs:element name="Potencia" msprop:Generator_UserColumnName="Potencia" msprop:Generator_ColumnPropNameInTable="PotenciaColumn" msprop:Generator_ColumnPropNameInRow="Potencia" msprop:Generator_ColumnVarNameInTable="columnPotencia" type="xs:int" />
+              <xs:element name="Consumo" msprop:Generator_UserColumnName="Consumo" msprop:Generator_ColumnPropNameInTable="ConsumoColumn" msprop:Generator_ColumnPropNameInRow="Consumo" msprop:Generator_ColumnVarNameInTable="columnConsumo" type="xs:double" />
+              <xs:element name="Combustivel" msprop:Generator_UserColumnName="Combustivel" msprop:Generator_ColumnPropNameInTable="CombustivelColumn" msprop:Generator_ColumnPropNameInRow="Combustivel" msprop:Generator_ColumnVarNameInTable="columnCombustivel">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="10" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="Codigo" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnPropNameInRow="Codigo" msprop:Generator_ColumnPropNameInTable="CodigoColumn" msprop:Generator_ColumnVarNameInTable="columnCodigo" msprop:Generator_UserColumnName="Codigo" type="xs:int" />
-              <xs:element name="Caminho1" msprop:Generator_ColumnPropNameInRow="Caminho1" msprop:Generator_ColumnPropNameInTable="Caminho1Column" msprop:Generator_ColumnVarNameInTable="columnCaminho1" msprop:Generator_UserColumnName="Caminho1">
+              <xs:element name="Codigo" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_UserColumnName="Codigo" msprop:Generator_ColumnPropNameInTable="CodigoColumn" msprop:Generator_ColumnPropNameInRow="Codigo" msprop:Generator_ColumnVarNameInTable="columnCodigo" type="xs:int" />
+              <xs:element name="Caminho1" msprop:Generator_UserColumnName="Caminho1" msprop:Generator_ColumnPropNameInTable="Caminho1Column" msprop:Generator_ColumnPropNameInRow="Caminho1" msprop:Generator_ColumnVarNameInTable="columnCaminho1">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="2147483647" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="Caminho2" msprop:Generator_ColumnPropNameInRow="Caminho2" msprop:Generator_ColumnPropNameInTable="Caminho2Column" msprop:Generator_ColumnVarNameInTable="columnCaminho2" msprop:Generator_UserColumnName="Caminho2" minOccurs="0">
+              <xs:element name="Caminho2" msprop:Generator_UserColumnName="Caminho2" msprop:Generator_ColumnPropNameInTable="Caminho2Column" msprop:Generator_ColumnPropNameInRow="Caminho2" msprop:Generator_ColumnVarNameInTable="columnCaminho2" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="2147483647" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="Caminho3" msprop:Generator_ColumnPropNameInRow="Caminho3" msprop:Generator_ColumnPropNameInTable="Caminho3Column" msprop:Generator_ColumnVarNameInTable="columnCaminho3" msprop:Generator_UserColumnName="Caminho3" minOccurs="0">
+              <xs:element name="Caminho3" msprop:Generator_UserColumnName="Caminho3" msprop:Generator_ColumnPropNameInTable="Caminho3Column" msprop:Generator_ColumnPropNameInRow="Caminho3" msprop:Generator_ColumnVarNameInTable="columnCaminho3" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="2147483647" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="Caminho4" msprop:Generator_ColumnPropNameInRow="Caminho4" msprop:Generator_ColumnPropNameInTable="Caminho4Column" msprop:Generator_ColumnVarNameInTable="columnCaminho4" msprop:Generator_UserColumnName="Caminho4" minOccurs="0">
+              <xs:element name="Caminho4" msprop:Generator_UserColumnName="Caminho4" msprop:Generator_ColumnPropNameInTable="Caminho4Column" msprop:Generator_ColumnPropNameInRow="Caminho4" msprop:Generator_ColumnVarNameInTable="columnCaminho4" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="2147483647" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="Preço" msprop:Generator_ColumnPropNameInRow="Preço" msprop:Generator_ColumnPropNameInTable="PreçoColumn" msprop:Generator_ColumnVarNameInTable="columnPreço" msprop:Generator_UserColumnName="Preço" type="xs:double" />
-              <xs:element name="ID_Usuario" msprop:Generator_ColumnPropNameInRow="ID_Usuario" msprop:Generator_ColumnPropNameInTable="ID_UsuarioColumn" msprop:Generator_ColumnVarNameInTable="columnID_Usuario" msprop:Generator_UserColumnName="ID_Usuario" type="xs:int" />
+              <xs:element name="Preço" msprop:Generator_UserColumnName="Preço" msprop:Generator_ColumnPropNameInTable="PreçoColumn" msprop:Generator_ColumnPropNameInRow="Preço" msprop:Generator_ColumnVarNameInTable="columnPreço" type="xs:double" />
+              <xs:element name="ID_Usuario" msprop:Generator_UserColumnName="ID_Usuario" msprop:Generator_ColumnPropNameInTable="ID_UsuarioColumn" msprop:Generator_ColumnPropNameInRow="ID_Usuario" msprop:Generator_ColumnVarNameInTable="columnID_Usuario" type="xs:int" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Rel_VeiculosNegociados" msprop:Generator_RowEvHandlerName="Rel_VeiculosNegociadosRowChangeEventHandler" msprop:Generator_RowDeletedName="Rel_VeiculosNegociadosRowDeleted" msprop:Generator_RowDeletingName="Rel_VeiculosNegociadosRowDeleting" msprop:Generator_RowEvArgName="Rel_VeiculosNegociadosRowChangeEvent" msprop:Generator_TablePropName="Rel_VeiculosNegociados" msprop:Generator_RowChangedName="Rel_VeiculosNegociadosRowChanged" msprop:Generator_RowChangingName="Rel_VeiculosNegociadosRowChanging" msprop:Generator_TableClassName="Rel_VeiculosNegociadosDataTable" msprop:Generator_RowClassName="Rel_VeiculosNegociadosRow" msprop:Generator_TableVarName="tableRel_VeiculosNegociados" msprop:Generator_UserTableName="Rel_VeiculosNegociados">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Marca" msprop:Generator_ColumnPropNameInRow="Marca" msprop:Generator_ColumnPropNameInTable="MarcaColumn" msprop:Generator_ColumnVarNameInTable="columnMarca" msprop:Generator_UserColumnName="Marca" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="15" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Modelo" msprop:Generator_ColumnPropNameInRow="Modelo" msprop:Generator_ColumnPropNameInTable="ModeloColumn" msprop:Generator_ColumnVarNameInTable="columnModelo" msprop:Generator_UserColumnName="Modelo" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="15" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Ano" msprop:Generator_ColumnPropNameInRow="Ano" msprop:Generator_ColumnPropNameInTable="AnoColumn" msprop:Generator_ColumnVarNameInTable="columnAno" msprop:Generator_UserColumnName="Ano" type="xs:int" minOccurs="0" />
+              <xs:element name="Condicao" msprop:Generator_ColumnPropNameInRow="Condicao" msprop:Generator_ColumnPropNameInTable="CondicaoColumn" msprop:Generator_ColumnVarNameInTable="columnCondicao" msprop:Generator_UserColumnName="Condicao" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="15" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Preço" msprop:Generator_ColumnPropNameInRow="Preço" msprop:Generator_ColumnPropNameInTable="PreçoColumn" msprop:Generator_ColumnVarNameInTable="columnPreço" msprop:Generator_UserColumnName="Preço" type="xs:double" minOccurs="0" />
+              <xs:element name="Status" msprop:Generator_ColumnPropNameInRow="Status" msprop:Generator_ColumnPropNameInTable="StatusColumn" msprop:Generator_ColumnVarNameInTable="columnStatus" msprop:Generator_UserColumnName="Status" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="15" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ID_Negoc" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnPropNameInRow="ID_Negoc" msprop:Generator_ColumnPropNameInTable="ID_NegocColumn" msprop:Generator_ColumnVarNameInTable="columnID_Negoc" msprop:Generator_UserColumnName="ID_Negoc" type="xs:int" />
+              <xs:element name="nome" msprop:Generator_ColumnPropNameInRow="nome" msprop:Generator_ColumnPropNameInTable="nomeColumn" msprop:Generator_ColumnVarNameInTable="columnnome" msprop:Generator_UserColumnName="nome" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="usuario" msprop:Generator_ColumnPropNameInRow="usuario" msprop:Generator_ColumnPropNameInTable="usuarioColumn" msprop:Generator_ColumnVarNameInTable="columnusuario" msprop:Generator_UserColumnName="usuario" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
@@ -619,14 +705,18 @@ SELECT Marca, Modelo, Ano, Condicao, Cambio, Potencia, Consumo, Combustivel, Cod
       <xs:selector xpath=".//mstns:Veiculos" />
       <xs:field xpath="mstns:Codigo" />
     </xs:unique>
+    <xs:unique name="Rel_VeiculosNegociados_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Rel_VeiculosNegociados" />
+      <xs:field xpath="mstns:ID_Negoc" />
+    </xs:unique>
   </xs:element>
   <xs:annotation>
     <xs:appinfo>
-      <msdata:Relationship name="FK_NEGOC_USUARIO1" msdata:parent="Usuarios" msdata:child="Veiculos_Negociados" msdata:parentkey="id_usuario" msdata:childkey="ID_Usuario" msprop:Generator_UserParentTable="Usuarios" msprop:Generator_UserChildTable="Veiculos_Negociados" msprop:Generator_RelationVarName="relationFK_NEGOC_USUARIO1" msprop:Generator_ChildPropName="GetVeiculos_NegociadosRows" msprop:Generator_ParentPropName="UsuariosRow" msprop:Generator_UserRelationName="FK_NEGOC_USUARIO1" />
-      <msdata:Relationship name="FK_TEST_CRIADOR" msdata:parent="Usuarios" msdata:child="Test_Drive" msdata:parentkey="id_usuario" msdata:childkey="ID_Usr_Criador" msprop:Generator_UserParentTable="Usuarios" msprop:Generator_UserChildTable="Test_Drive" msprop:Generator_RelationVarName="relationFK_TEST_CRIADOR" msprop:Generator_ChildPropName="GetTest_DriveRowsByFK_TEST_CRIADOR" msprop:Generator_ParentPropName="UsuariosRowByFK_TEST_CRIADOR" msprop:Generator_UserRelationName="FK_TEST_CRIADOR" />
-      <msdata:Relationship name="FK_TEST_REALIZADOR" msdata:parent="Usuarios" msdata:child="Test_Drive" msdata:parentkey="id_usuario" msdata:childkey="ID_Usr_Real" msprop:Generator_UserParentTable="Usuarios" msprop:Generator_UserChildTable="Test_Drive" msprop:Generator_RelationVarName="relationFK_TEST_REALIZADOR" msprop:Generator_ChildPropName="GetTest_DriveRowsByFK_TEST_REALIZADOR" msprop:Generator_ParentPropName="UsuariosRowByFK_TEST_REALIZADOR" msprop:Generator_UserRelationName="FK_TEST_REALIZADOR" />
-      <msdata:Relationship name="FK_TEST_VEICULO" msdata:parent="Veiculos" msdata:child="Test_Drive" msdata:parentkey="Codigo" msdata:childkey="ID_Veiculo" msprop:Generator_UserParentTable="Veiculos" msprop:Generator_UserChildTable="Test_Drive" msprop:Generator_RelationVarName="relationFK_TEST_VEICULO" msprop:Generator_UserRelationName="FK_TEST_VEICULO" msprop:Generator_ChildPropName="GetTest_DriveRows" msprop:Generator_ParentPropName="VeiculosRow" />
-      <msdata:Relationship name="FK_USUARIO_VEICULO" msdata:parent="Usuarios" msdata:child="Veiculos" msdata:parentkey="id_usuario" msdata:childkey="ID_Usuario" msprop:Generator_UserParentTable="Usuarios" msprop:Generator_UserChildTable="Veiculos" msprop:Generator_RelationVarName="relationFK_USUARIO_VEICULO" msprop:Generator_ChildPropName="GetVeiculosRows" msprop:Generator_ParentPropName="UsuariosRow" msprop:Generator_UserRelationName="FK_USUARIO_VEICULO" />
+      <msdata:Relationship name="FK_NEGOC_USUARIO1" msdata:parent="Usuarios" msdata:child="Veiculos_Negociados" msdata:parentkey="id_usuario" msdata:childkey="ID_Usuario" msprop:Generator_UserParentTable="Usuarios" msprop:Generator_UserChildTable="Veiculos_Negociados" msprop:Generator_RelationVarName="relationFK_NEGOC_USUARIO1" msprop:Generator_ChildPropName="GetVeiculos_NegociadosRows" msprop:Generator_UserRelationName="FK_NEGOC_USUARIO1" msprop:Generator_ParentPropName="UsuariosRow" />
+      <msdata:Relationship name="FK_TEST_CRIADOR" msdata:parent="Usuarios" msdata:child="Test_Drive" msdata:parentkey="id_usuario" msdata:childkey="ID_Usr_Criador" msprop:Generator_UserParentTable="Usuarios" msprop:Generator_UserChildTable="Test_Drive" msprop:Generator_RelationVarName="relationFK_TEST_CRIADOR" msprop:Generator_ChildPropName="GetTest_DriveRowsByFK_TEST_CRIADOR" msprop:Generator_UserRelationName="FK_TEST_CRIADOR" msprop:Generator_ParentPropName="UsuariosRowByFK_TEST_CRIADOR" />
+      <msdata:Relationship name="FK_TEST_REALIZADOR" msdata:parent="Usuarios" msdata:child="Test_Drive" msdata:parentkey="id_usuario" msdata:childkey="ID_Usr_Real" msprop:Generator_UserParentTable="Usuarios" msprop:Generator_UserChildTable="Test_Drive" msprop:Generator_RelationVarName="relationFK_TEST_REALIZADOR" msprop:Generator_ChildPropName="GetTest_DriveRowsByFK_TEST_REALIZADOR" msprop:Generator_UserRelationName="FK_TEST_REALIZADOR" msprop:Generator_ParentPropName="UsuariosRowByFK_TEST_REALIZADOR" />
+      <msdata:Relationship name="FK_TEST_VEICULO" msdata:parent="Veiculos" msdata:child="Test_Drive" msdata:parentkey="Codigo" msdata:childkey="ID_Veiculo" msprop:Generator_UserParentTable="Veiculos" msprop:Generator_UserChildTable="Test_Drive" msprop:Generator_RelationVarName="relationFK_TEST_VEICULO" msprop:Generator_ChildPropName="GetTest_DriveRows" msprop:Generator_ParentPropName="VeiculosRow" msprop:Generator_UserRelationName="FK_TEST_VEICULO" />
+      <msdata:Relationship name="FK_USUARIO_VEICULO" msdata:parent="Usuarios" msdata:child="Veiculos" msdata:parentkey="id_usuario" msdata:childkey="ID_Usuario" msprop:Generator_UserParentTable="Usuarios" msprop:Generator_UserChildTable="Veiculos" msprop:Generator_RelationVarName="relationFK_USUARIO_VEICULO" msprop:Generator_ChildPropName="GetVeiculosRows" msprop:Generator_UserRelationName="FK_USUARIO_VEICULO" msprop:Generator_ParentPropName="UsuariosRow" />
     </xs:appinfo>
   </xs:annotation>
 </xs:schema>
