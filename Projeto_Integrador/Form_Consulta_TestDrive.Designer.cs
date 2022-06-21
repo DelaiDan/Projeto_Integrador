@@ -37,16 +37,17 @@
             this.usuariosTableAdapter = new Projeto_Integrador.ProjetoDataSetTableAdapters.UsuariosTableAdapter();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.gb_FiltrosConsultaTD = new System.Windows.Forms.GroupBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+            this.dt_escolherData2 = new System.Windows.Forms.DateTimePicker();
+            this.dt_escolherData1 = new System.Windows.Forms.DateTimePicker();
+            this.tx_Cliente = new System.Windows.Forms.TextBox();
             this.cb_Veiculo = new System.Windows.Forms.ComboBox();
             this.cb_Usuario_Real = new System.Windows.Forms.ComboBox();
-            this.dt_escolherData2 = new System.Windows.Forms.DateTimePicker();
-            this.label1 = new System.Windows.Forms.Label();
-            this.dt_escolherData1 = new System.Windows.Forms.DateTimePicker();
-            this.label2 = new System.Windows.Forms.Label();
-            this.tx_Cliente = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
+            this.btDeletar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.usuariosBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.projetoDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.veiculosBindingSource)).BeginInit();
@@ -90,18 +91,20 @@
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(772, 329);
             this.dataGridView1.TabIndex = 6;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
             // gb_FiltrosConsultaTD
             // 
+            this.gb_FiltrosConsultaTD.Controls.Add(this.btDeletar);
             this.gb_FiltrosConsultaTD.Controls.Add(this.label1);
-            this.gb_FiltrosConsultaTD.Controls.Add(this.label2);
             this.gb_FiltrosConsultaTD.Controls.Add(this.label3);
             this.gb_FiltrosConsultaTD.Controls.Add(this.label4);
+            this.gb_FiltrosConsultaTD.Controls.Add(this.label2);
             this.gb_FiltrosConsultaTD.Controls.Add(this.label5);
-            this.gb_FiltrosConsultaTD.Controls.Add(this.dt_escolherData2);
-            this.gb_FiltrosConsultaTD.Controls.Add(this.dt_escolherData1);
             this.gb_FiltrosConsultaTD.Controls.Add(this.tx_Cliente);
+            this.gb_FiltrosConsultaTD.Controls.Add(this.dt_escolherData1);
             this.gb_FiltrosConsultaTD.Controls.Add(this.cb_Veiculo);
+            this.gb_FiltrosConsultaTD.Controls.Add(this.dt_escolherData2);
             this.gb_FiltrosConsultaTD.Controls.Add(this.cb_Usuario_Real);
             this.gb_FiltrosConsultaTD.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold);
             this.gb_FiltrosConsultaTD.Location = new System.Drawing.Point(16, 11);
@@ -112,6 +115,28 @@
             this.gb_FiltrosConsultaTD.TabIndex = 13;
             this.gb_FiltrosConsultaTD.TabStop = false;
             this.gb_FiltrosConsultaTD.Text = "Filtros";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.label1.Location = new System.Drawing.Point(199, 56);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(28, 17);
+            this.label1.TabIndex = 22;
+            this.label1.Text = "até";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.label2.Location = new System.Drawing.Point(1, 55);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(61, 17);
+            this.label2.TabIndex = 21;
+            this.label2.Text = "Periodo:";
             // 
             // label3
             // 
@@ -124,16 +149,59 @@
             this.label3.TabIndex = 20;
             this.label3.Text = "Realizador:";
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.label4.Location = new System.Drawing.Point(362, 55);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(55, 17);
+            this.label4.TabIndex = 19;
+            this.label4.Text = "Cliente:";
+            // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.label5.Location = new System.Drawing.Point(403, 17);
+            this.label5.Location = new System.Drawing.Point(360, 20);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(58, 17);
             this.label5.TabIndex = 18;
             this.label5.Text = "Modelo:";
+            // 
+            // dt_escolherData2
+            // 
+            this.dt_escolherData2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.dt_escolherData2.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dt_escolherData2.Location = new System.Drawing.Point(240, 51);
+            this.dt_escolherData2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dt_escolherData2.Name = "dt_escolherData2";
+            this.dt_escolherData2.Size = new System.Drawing.Size(104, 23);
+            this.dt_escolherData2.TabIndex = 17;
+            this.dt_escolherData2.ValueChanged += new System.EventHandler(this.dt_escolherData2_ValueChanged);
+            // 
+            // dt_escolherData1
+            // 
+            this.dt_escolherData1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.dt_escolherData1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dt_escolherData1.Location = new System.Drawing.Point(88, 51);
+            this.dt_escolherData1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dt_escolherData1.Name = "dt_escolherData1";
+            this.dt_escolherData1.Size = new System.Drawing.Size(104, 23);
+            this.dt_escolherData1.TabIndex = 16;
+            this.dt_escolherData1.ValueChanged += new System.EventHandler(this.dt_escolherData1_ValueChanged);
+            // 
+            // tx_Cliente
+            // 
+            this.tx_Cliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.tx_Cliente.Location = new System.Drawing.Point(426, 51);
+            this.tx_Cliente.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tx_Cliente.Name = "tx_Cliente";
+            this.tx_Cliente.Size = new System.Drawing.Size(184, 23);
+            this.tx_Cliente.TabIndex = 15;
+            this.tx_Cliente.TextChanged += new System.EventHandler(this.tx_Cliente_TextChanged);
             // 
             // cb_Veiculo
             // 
@@ -141,10 +209,10 @@
             this.cb_Veiculo.DisplayMember = "Modelo";
             this.cb_Veiculo.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.cb_Veiculo.FormattingEnabled = true;
-            this.cb_Veiculo.Location = new System.Drawing.Point(469, 14);
+            this.cb_Veiculo.Location = new System.Drawing.Point(426, 17);
             this.cb_Veiculo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cb_Veiculo.Name = "cb_Veiculo";
-            this.cb_Veiculo.Size = new System.Drawing.Size(256, 25);
+            this.cb_Veiculo.Size = new System.Drawing.Size(184, 25);
             this.cb_Veiculo.TabIndex = 14;
             this.cb_Veiculo.ValueMember = "Modelo";
             this.cb_Veiculo.SelectedIndexChanged += new System.EventHandler(this.cb_Veiculo_SelectedIndexChanged);
@@ -163,70 +231,17 @@
             this.cb_Usuario_Real.ValueMember = "id_usuario";
             this.cb_Usuario_Real.SelectedIndexChanged += new System.EventHandler(this.cb_Usuario_Real_SelectedIndexChanged);
             // 
-            // dt_escolherData2
+            // btDeletar
             // 
-            this.dt_escolherData2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.dt_escolherData2.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dt_escolherData2.Location = new System.Drawing.Point(621, 54);
-            this.dt_escolherData2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.dt_escolherData2.Name = "dt_escolherData2";
-            this.dt_escolherData2.Size = new System.Drawing.Size(104, 23);
-            this.dt_escolherData2.TabIndex = 17;
-            this.dt_escolherData2.ValueChanged += new System.EventHandler(this.dt_escolherData2_ValueChanged);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.label1.Location = new System.Drawing.Point(585, 58);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(28, 17);
-            this.label1.TabIndex = 22;
-            this.label1.Text = "até";
-            // 
-            // dt_escolherData1
-            // 
-            this.dt_escolherData1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.dt_escolherData1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dt_escolherData1.Location = new System.Drawing.Point(469, 54);
-            this.dt_escolherData1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.dt_escolherData1.Name = "dt_escolherData1";
-            this.dt_escolherData1.Size = new System.Drawing.Size(104, 23);
-            this.dt_escolherData1.TabIndex = 16;
-            this.dt_escolherData1.ValueChanged += new System.EventHandler(this.dt_escolherData1_ValueChanged);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.label2.Location = new System.Drawing.Point(403, 58);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(61, 17);
-            this.label2.TabIndex = 21;
-            this.label2.Text = "Periodo:";
-            // 
-            // tx_Cliente
-            // 
-            this.tx_Cliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.tx_Cliente.Location = new System.Drawing.Point(88, 54);
-            this.tx_Cliente.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tx_Cliente.Name = "tx_Cliente";
-            this.tx_Cliente.Size = new System.Drawing.Size(256, 23);
-            this.tx_Cliente.TabIndex = 15;
-            this.tx_Cliente.TextChanged += new System.EventHandler(this.tx_Cliente_TextChanged);
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.label4.Location = new System.Drawing.Point(24, 58);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(55, 17);
-            this.label4.TabIndex = 19;
-            this.label4.Text = "Cliente:";
+            this.btDeletar.BackColor = System.Drawing.Color.Tomato;
+            this.btDeletar.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btDeletar.Location = new System.Drawing.Point(653, 31);
+            this.btDeletar.Name = "btDeletar";
+            this.btDeletar.Size = new System.Drawing.Size(108, 41);
+            this.btDeletar.TabIndex = 23;
+            this.btDeletar.Text = "Excluir";
+            this.btDeletar.UseVisualStyleBackColor = false;
+            this.btDeletar.Click += new System.EventHandler(this.btDeletar_Click);
             // 
             // Form_Consulta_TestDrive
             // 
@@ -271,5 +286,6 @@
         private System.Windows.Forms.DateTimePicker dt_escolherData2;
         private System.Windows.Forms.DateTimePicker dt_escolherData1;
         private System.Windows.Forms.TextBox tx_Cliente;
+        private System.Windows.Forms.Button btDeletar;
     }
 }
