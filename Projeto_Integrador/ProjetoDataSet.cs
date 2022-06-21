@@ -6,3 +6,10 @@
     {
     }
 }
+
+namespace Projeto_Integrador.ProjetoDataSetTableAdapters {
+    
+    
+    public partial class Rel_VeiculosNegociadosTableAdapter {
+    }
+}

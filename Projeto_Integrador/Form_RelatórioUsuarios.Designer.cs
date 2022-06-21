@@ -34,10 +34,15 @@ namespace Projeto_Integrador
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_RelatórioUsuarios));
             this.UsuariosBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.ProjetoDataSet = new Projeto_Integrador.ProjetoDataSet();
+            this.VeiculosBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.UsuariosTableAdapter = new Projeto_Integrador.ProjetoDataSetTableAdapters.UsuariosTableAdapter();
+            this.veiculosBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.veiculosTableAdapter = new Projeto_Integrador.ProjetoDataSetTableAdapters.VeiculosTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.UsuariosBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ProjetoDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VeiculosBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.veiculosBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // UsuariosBindingSource
@@ -50,6 +55,11 @@ namespace Projeto_Integrador
             this.ProjetoDataSet.DataSetName = "ProjetoDataSet";
             this.ProjetoDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
+            // VeiculosBindingSource
+            // 
+            this.VeiculosBindingSource.DataMember = "Veiculos";
+            this.VeiculosBindingSource.DataSource = this.ProjetoDataSet;
+            // 
             // reportViewer1
             // 
             this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -58,25 +68,34 @@ namespace Projeto_Integrador
             this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "Projeto_Integrador.Report2.rdlc";
             this.reportViewer1.Location = new System.Drawing.Point(0, 0);
-            this.reportViewer1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.reportViewer1.Margin = new System.Windows.Forms.Padding(2);
             this.reportViewer1.Name = "reportViewer1";
             this.reportViewer1.ServerReport.BearerToken = null;
-            this.reportViewer1.Size = new System.Drawing.Size(842, 545);
+            this.reportViewer1.Size = new System.Drawing.Size(944, 546);
             this.reportViewer1.TabIndex = 0;
             // 
             // UsuariosTableAdapter
             // 
             this.UsuariosTableAdapter.ClearBeforeFill = true;
             // 
+            // veiculosBindingSource1
+            // 
+            this.veiculosBindingSource1.DataMember = "Veiculos";
+            this.veiculosBindingSource1.DataSource = this.ProjetoDataSet;
+            // 
+            // veiculosTableAdapter
+            // 
+            this.veiculosTableAdapter.ClearBeforeFill = true;
+            // 
             // Form_RelatórioUsuarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(842, 545);
+            this.ClientSize = new System.Drawing.Size(944, 546);
             this.Controls.Add(this.reportViewer1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.Name = "Form_RelatórioUsuarios";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -84,6 +103,8 @@ namespace Projeto_Integrador
             this.Load += new System.EventHandler(this.Form_RelatórioUsuarios_Load);
             ((System.ComponentModel.ISupportInitialize)(this.UsuariosBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ProjetoDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VeiculosBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.veiculosBindingSource1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -94,5 +115,8 @@ namespace Projeto_Integrador
         private System.Windows.Forms.BindingSource UsuariosBindingSource;
         private ProjetoDataSet ProjetoDataSet;
         private ProjetoDataSetTableAdapters.UsuariosTableAdapter UsuariosTableAdapter;
+        private System.Windows.Forms.BindingSource VeiculosBindingSource;
+        private System.Windows.Forms.BindingSource veiculosBindingSource1;
+        private ProjetoDataSetTableAdapters.VeiculosTableAdapter veiculosTableAdapter;
     }
 }
