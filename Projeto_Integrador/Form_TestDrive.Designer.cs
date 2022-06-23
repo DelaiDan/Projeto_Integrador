@@ -359,11 +359,12 @@
             // btnAgendar
             // 
             this.btnAgendar.BackColor = System.Drawing.Color.GreenYellow;
+            this.btnAgendar.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAgendar.Location = new System.Drawing.Point(871, 427);
             this.btnAgendar.Name = "btnAgendar";
             this.btnAgendar.Size = new System.Drawing.Size(99, 46);
             this.btnAgendar.TabIndex = 9;
-            this.btnAgendar.Text = "Agendar!";
+            this.btnAgendar.Text = "Agendar";
             this.btnAgendar.UseVisualStyleBackColor = false;
             this.btnAgendar.Click += new System.EventHandler(this.btnAgendar_Click);
             // 
@@ -399,12 +400,14 @@
             // btLimparAgendamento
             // 
             this.btLimparAgendamento.BackColor = System.Drawing.Color.Tomato;
+            this.btLimparAgendamento.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btLimparAgendamento.Location = new System.Drawing.Point(701, 427);
             this.btLimparAgendamento.Name = "btLimparAgendamento";
             this.btLimparAgendamento.Size = new System.Drawing.Size(95, 46);
             this.btLimparAgendamento.TabIndex = 11;
             this.btLimparAgendamento.Text = "Limpar";
             this.btLimparAgendamento.UseVisualStyleBackColor = false;
+            this.btLimparAgendamento.Click += new System.EventHandler(this.btLimparAgendamento_Click);
             // 
             // Form_TestDrive
             // 
