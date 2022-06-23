@@ -76,7 +76,7 @@ namespace Projeto_Integrador
             this.rbGerente.AutoSize = true;
             this.rbGerente.Location = new System.Drawing.Point(150, 227);
             this.rbGerente.Name = "rbGerente";
-            this.rbGerente.Size = new System.Drawing.Size(81, 21);
+            this.rbGerente.Size = new System.Drawing.Size(76, 20);
             this.rbGerente.TabIndex = 13;
             this.rbGerente.TabStop = true;
             this.rbGerente.Text = "Gerente";
@@ -87,7 +87,7 @@ namespace Projeto_Integrador
             this.rbVendedor.AutoSize = true;
             this.rbVendedor.Location = new System.Drawing.Point(150, 254);
             this.rbVendedor.Name = "rbVendedor";
-            this.rbVendedor.Size = new System.Drawing.Size(91, 21);
+            this.rbVendedor.Size = new System.Drawing.Size(88, 20);
             this.rbVendedor.TabIndex = 12;
             this.rbVendedor.TabStop = true;
             this.rbVendedor.Text = "Vendedor";
@@ -98,7 +98,7 @@ namespace Projeto_Integrador
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(104, 224);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(40, 17);
+            this.label6.Size = new System.Drawing.Size(38, 16);
             this.label6.TabIndex = 11;
             this.label6.Text = "Tipo:";
             // 
@@ -116,7 +116,7 @@ namespace Projeto_Integrador
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(6, 179);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(138, 17);
+            this.label5.Size = new System.Drawing.Size(128, 16);
             this.label5.TabIndex = 8;
             this.label5.Text = "Confirme sua senha:";
             // 
@@ -134,7 +134,7 @@ namespace Projeto_Integrador
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(91, 142);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(53, 17);
+            this.label4.Size = new System.Drawing.Size(49, 16);
             this.label4.TabIndex = 6;
             this.label4.Text = "Senha:";
             // 
@@ -151,7 +151,7 @@ namespace Projeto_Integrador
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(83, 105);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(61, 17);
+            this.label3.Size = new System.Drawing.Size(57, 16);
             this.label3.TabIndex = 4;
             this.label3.Text = "Usuário:";
             // 
@@ -176,7 +176,7 @@ namespace Projeto_Integrador
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(59, 64);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(85, 17);
+            this.label2.Size = new System.Drawing.Size(81, 16);
             this.label2.TabIndex = 1;
             this.label2.Text = "Sobrenome:";
             // 
@@ -185,12 +185,13 @@ namespace Projeto_Integrador
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(95, 30);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(49, 17);
+            this.label1.Size = new System.Drawing.Size(47, 16);
             this.label1.TabIndex = 0;
             this.label1.Text = "Nome:";
             // 
             // button2
             // 
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.Location = new System.Drawing.Point(250, 327);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(120, 44);
@@ -201,6 +202,7 @@ namespace Projeto_Integrador
             // 
             // btCadastrarUsuario
             // 
+            this.btCadastrarUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btCadastrarUsuario.Location = new System.Drawing.Point(12, 327);
             this.btCadastrarUsuario.Name = "btCadastrarUsuario";
             this.btCadastrarUsuario.Size = new System.Drawing.Size(120, 44);

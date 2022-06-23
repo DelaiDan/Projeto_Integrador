@@ -260,6 +260,7 @@
             // bt_Cancelar
             // 
             this.bt_Cancelar.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.bt_Cancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bt_Cancelar.Location = new System.Drawing.Point(817, 148);
             this.bt_Cancelar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.bt_Cancelar.Name = "bt_Cancelar";
@@ -324,6 +325,7 @@
             // btLimparVeiculo
             // 
             this.btLimparVeiculo.BackColor = System.Drawing.Color.Tomato;
+            this.btLimparVeiculo.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btLimparVeiculo.Location = new System.Drawing.Point(819, 94);
             this.btLimparVeiculo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btLimparVeiculo.Name = "btLimparVeiculo";
@@ -336,6 +338,7 @@
             // btAlterarVeiculo
             // 
             this.btAlterarVeiculo.BackColor = System.Drawing.Color.GreenYellow;
+            this.btAlterarVeiculo.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btAlterarVeiculo.Location = new System.Drawing.Point(819, 38);
             this.btAlterarVeiculo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btAlterarVeiculo.Name = "btAlterarVeiculo";

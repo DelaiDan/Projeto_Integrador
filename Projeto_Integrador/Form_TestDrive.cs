@@ -256,5 +256,20 @@ namespace Projeto_Integrador
                 }
             }
         }
+
+        private void btLimparAgendamento_Click(object sender, EventArgs e)
+        {
+            txAno.Text = "";
+            txCondicao.Text = "";
+            txMarca.Text = "";
+            txModelo.Text = "";
+            txPreço.Text = "";
+            tx_Cliente.Text = "";
+            dt_escolherData.Value = DateTime.Now;
+            Codigo_Veiculo = 0;
+            Veiculo = "";
+            Usuario_Realizador = "";
+            Cliente = "";
+        }
     }
 }

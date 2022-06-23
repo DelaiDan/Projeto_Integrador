@@ -346,13 +346,14 @@ namespace Projeto_Integrador
             // 
             // btDeletar
             // 
+            this.btDeletar.BackColor = System.Drawing.Color.Tomato;
             this.btDeletar.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btDeletar.Location = new System.Drawing.Point(829, 525);
             this.btDeletar.Name = "btDeletar";
             this.btDeletar.Size = new System.Drawing.Size(108, 41);
             this.btDeletar.TabIndex = 22;
             this.btDeletar.Text = "Excluir";
-            this.btDeletar.UseVisualStyleBackColor = true;
+            this.btDeletar.UseVisualStyleBackColor = false;
             this.btDeletar.Click += new System.EventHandler(this.btDeletar_Click);
             // 
             // lbUsuario_Cadastro

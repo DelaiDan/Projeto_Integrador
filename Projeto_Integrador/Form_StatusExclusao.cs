@@ -40,7 +40,8 @@ namespace Projeto_Integrador
 
 
             comm = new SqlCommand("INSERT INTO Veiculos_Negociados(Marca, Modelo, Ano, Condicao, Preço, Status, ID_Usuario) "+
-                "VALUES (@Marca, @Modelo, @Ano, @Condicao, @Preço, @Status, @ID_Usuario)", conn);
+                "VALUES (@Marca, @Modelo, @Ano, @Condicao, @Preço, @Status, @ID_Usuario) " +
+                "DELETE FROM Veiculos WHERE Codigo = @Codigo", conn);
 
             comm.Parameters.Add("@Status", System.Data.SqlDbType.NVarChar);
             comm.Parameters["@Status"].Value = status;
@@ -62,6 +63,9 @@ namespace Projeto_Integrador
 
             comm.Parameters.Add("@ID_Usuario", System.Data.SqlDbType.Int);
             comm.Parameters["@ID_Usuario"].Value = Codigo_Usuario;
+
+            comm.Parameters.Add("@Codigo", System.Data.SqlDbType.Int);
+            comm.Parameters["@Codigo"].Value = Codigo_Veiculo;
 
             try
             {
